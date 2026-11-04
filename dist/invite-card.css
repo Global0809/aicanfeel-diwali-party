@@ -9,7 +9,7 @@ diwali-invite [hidden]{display:none!important}
 .diwali-ritual-facts span+span{display:flex;align-items:center;gap:20px}.diwali-ritual-facts span+span:before{content:"";width:3px;height:3px;border-radius:50%;background:var(--pass-gold);opacity:.6}
 .diwali-ritual-action{position:relative;isolation:isolate;display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:390px;text-align:center}
 .diwali-ritual-aura{position:absolute;z-index:-1;width:min(390px,100%);aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,rgba(255,202,120,.2),rgba(235,78,36,.15) 32%,rgba(211,25,28,.06) 52%,transparent 70%);animation:diwali-ritual-breathe 5.5s ease-in-out infinite;animation-play-state:paused;pointer-events:none}
-.diwali-ritual-burst{position:absolute;z-index:-1;left:50%;top:50%;width:min(390px,110%);height:auto;overflow:visible;fill:none;stroke:var(--pass-gold);stroke-width:1;stroke-linecap:round;animation:diwali-ritual-spark 5.5s ease-in-out infinite;animation-play-state:paused;pointer-events:none}
+.diwali-ritual-burst{position:absolute;z-index:-1;left:50%;top:50%;width:min(390px,110%);height:auto;transform:translate(-50%,-50%);overflow:visible;fill:none;stroke:var(--pass-gold);stroke-width:1;stroke-linecap:round;animation:diwali-ritual-spark 5.5s ease-in-out infinite;animation-play-state:paused;pointer-events:none}
 .diwali-ritual-burst g:first-child{opacity:.45}.diwali-ritual-sparks{stroke-width:1.4;opacity:.8}
 .diwali-invite-ritual .diwali-ritual-tap{position:absolute;top:calc(50% + 65px);left:0;right:0;font-size:11px;color:var(--pass-gold)}
 diwali-invite.is-visible .diwali-ritual-aura,diwali-invite.is-visible .diwali-ritual-burst{animation-play-state:running}
