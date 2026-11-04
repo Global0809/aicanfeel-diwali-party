@@ -1,0 +1,335 @@
+{
+  "schema": 1,
+  "description": "Phone-only JPEG variants for the retained HAPE red gorilla and red environment. Original assets are unchanged.",
+  "entries": {
+    "/aicanfeel-diwali-party/glxp/environment/LightRed3.jpg": {
+      "url": "/aicanfeel-diwali-party/mobile-textures/glxp/environment/LightRed3.jpg",
+      "sourceUrl": "/aicanfeel-diwali-party/glxp/environment/LightRed3.jpg",
+      "kind": "lighting",
+      "sourceBytes": 43072,
+      "bytes": 4537,
+      "sourceDimensions": [
+        2048,
+        1024
+      ],
+      "dimensions": [
+        1024,
+        512
+      ],
+      "quality": 85
+    },
+    "/aicanfeel-diwali-party/glxp/environment/SkyboxRed.jpg": {
+      "url": "/aicanfeel-diwali-party/mobile-textures/glxp/environment/SkyboxRed.jpg",
+      "sourceUrl": "/aicanfeel-diwali-party/glxp/environment/SkyboxRed.jpg",
+      "kind": "skybox",
+      "sourceBytes": 1287430,
+      "bytes": 9792,
+      "sourceDimensions": [
+        2048,
+        1024
+      ],
+      "dimensions": [
+        1024,
+        512
+      ],
+      "quality": 85
+    },
+    "/aicanfeel-diwali-party/textures/Hape_0003/fbx-ape-lores_Obsidian_BaseColor.1001A.jpg": {
+      "url": "/aicanfeel-diwali-party/mobile-textures/textures/Hape_0003/2048/fbx-ape-lores_Obsidian_BaseColor.1001A.jpg.jpg",
+      "sourceUrl": "/aicanfeel-diwali-party/textures/Hape_0003/2048/fbx-ape-lores_Obsidian_BaseColor.1001A.jpg.jpg",
+      "kind": "color",
+      "sourceBytes": 524866,
+      "bytes": 41229,
+      "sourceDimensions": [
+        2048,
+        2048
+      ],
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "quality": 85
+    },
+    "/aicanfeel-diwali-party/textures/Hape_0003/fbx-ape-lores_Obsidian_Normal.1001.jpg": {
+      "url": "/aicanfeel-diwali-party/mobile-textures/textures/Hape_0003/2048/fbx-ape-lores_Obsidian_Normal.1001.jpg.jpg",
+      "sourceUrl": "/aicanfeel-diwali-party/textures/Hape_0003/2048/fbx-ape-lores_Obsidian_Normal.1001.jpg.jpg",
+      "kind": "normal",
+      "sourceBytes": 426569,
+      "bytes": 186197,
+      "sourceDimensions": [
+        2048,
+        2048
+      ],
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "quality": 85
+    },
+    "/aicanfeel-diwali-party/textures/Hape_0003/Mat_AO.jpg": {
+      "url": "/aicanfeel-diwali-party/mobile-textures/textures/Hape_0003/1024/Mat_AO.jpg.jpg",
+      "sourceUrl": "/aicanfeel-diwali-party/textures/Hape_0003/1024/Mat_AO.jpg.jpg",
+      "kind": "occlusion",
+      "sourceBytes": 60645,
+      "bytes": 20351,
+      "sourceDimensions": [
+        1024,
+        1024
+      ],
+      "dimensions": [
+        512,
+        512
+      ],
+      "quality": 85
+    },
+    "/aicanfeel-diwali-party/textures/Hape_0003/DefaultMaterial_Base_color_1.png": {
+      "url": "/aicanfeel-diwali-party/mobile-textures/textures/Hape_0003/512/DefaultMaterial_Base_color_1.png.jpg",
+      "sourceUrl": "/aicanfeel-diwali-party/textures/Hape_0003/512/DefaultMaterial_Base_color_1.png.jpg",
+      "kind": "color",
+      "sourceBytes": 9062,
+      "bytes": 5069,
+      "sourceDimensions": [
+        512,
+        512
+      ],
+      "dimensions": [
+        512,
+        512
+      ],
+      "quality": 85
+    },
+    "/aicanfeel-diwali-party/textures/Hape_0003/DefaultMaterial_Normal_OpenGL.png": {
+      "url": "/aicanfeel-diwali-party/mobile-textures/textures/Hape_0003/1024/DefaultMaterial_Normal_OpenGL.png.jpg",
+      "sourceUrl": "/aicanfeel-diwali-party/textures/Hape_0003/1024/DefaultMaterial_Normal_OpenGL.png.jpg",
+      "kind": "normal",
+      "sourceBytes": 504567,
+      "bytes": 59573,
+      "sourceDimensions": [
+        1024,
+        1024
+      ],
+      "dimensions": [
+        512,
+        512
+      ],
+      "quality": 85
+    },
+    "/aicanfeel-diwali-party/textures/Hape_0003/Mat.2_AO.jpg": {
+      "url": "/aicanfeel-diwali-party/mobile-textures/textures/Hape_0003/1024/Mat.2_AO.jpg.jpg",
+      "sourceUrl": "/aicanfeel-diwali-party/textures/Hape_0003/1024/Mat.2_AO.jpg.jpg",
+      "kind": "occlusion",
+      "sourceBytes": 67731,
+      "bytes": 20057,
+      "sourceDimensions": [
+        1024,
+        1024
+      ],
+      "dimensions": [
+        512,
+        512
+      ],
+      "quality": 85
+    },
+    "/aicanfeel-diwali-party/textures/Hape_0003/uploads_files_2938648_High(FBX)_FivePanel_Black_Color.1001.png": {
+      "url": "/aicanfeel-diwali-party/mobile-textures/textures/Hape_0003/512/uploads_files_2938648_High(FBX)_FivePanel_Black_Color.1001.png.jpg",
+      "sourceUrl": "/aicanfeel-diwali-party/textures/Hape_0003/512/uploads_files_2938648_High(FBX)_FivePanel_Black_Color.1001.png.jpg",
+      "kind": "color",
+      "sourceBytes": 1492,
+      "bytes": 1492,
+      "sourceDimensions": [
+        512,
+        512
+      ],
+      "dimensions": [
+        512,
+        512
+      ],
+      "quality": "original"
+    },
+    "/aicanfeel-diwali-party/textures/Hape_0003/Hat_FivePanel_AO.jpg": {
+      "url": "/aicanfeel-diwali-party/mobile-textures/textures/Hape_0003/512/Hat_FivePanel_AO.jpg.jpg",
+      "sourceUrl": "/aicanfeel-diwali-party/textures/Hape_0003/512/Hat_FivePanel_AO.jpg.jpg",
+      "kind": "occlusion",
+      "sourceBytes": 38661,
+      "bytes": 33244,
+      "sourceDimensions": [
+        512,
+        512
+      ],
+      "dimensions": [
+        512,
+        512
+      ],
+      "quality": 85
+    },
+    "/aicanfeel-diwali-party/textures/Hape_0003/uploads_files_2938648_HighFBX_FivePanel_Black_Normal.1001.png": {
+      "url": "/aicanfeel-diwali-party/mobile-textures/textures/Hape_0003/1024/uploads_files_2938648_HighFBX_FivePanel_Black_Normal.1001.png.jpg",
+      "sourceUrl": "/aicanfeel-diwali-party/textures/Hape_0003/1024/uploads_files_2938648_HighFBX_FivePanel_Black_Normal.1001.png.jpg",
+      "kind": "normal",
+      "sourceBytes": 717858,
+      "bytes": 132658,
+      "sourceDimensions": [
+        1024,
+        1024
+      ],
+      "dimensions": [
+        512,
+        512
+      ],
+      "quality": 85
+    },
+    "/aicanfeel-diwali-party/textures/Hape_0003/Laces_AO.jpg": {
+      "url": "/aicanfeel-diwali-party/mobile-textures/textures/Hape_0003/512/Laces_AO.jpg.jpg",
+      "sourceUrl": "/aicanfeel-diwali-party/textures/Hape_0003/512/Laces_AO.jpg.jpg",
+      "kind": "occlusion",
+      "sourceBytes": 51867,
+      "bytes": 45521,
+      "sourceDimensions": [
+        512,
+        512
+      ],
+      "dimensions": [
+        512,
+        512
+      ],
+      "quality": 85
+    },
+    "/aicanfeel-diwali-party/textures/Hape_0003/Bronx_Fixed_Bronx_Black_BaseColor_A.jpg": {
+      "url": "/aicanfeel-diwali-party/mobile-textures/textures/Hape_0003/256/Bronx_Fixed_Bronx_Black_BaseColor_A.jpg.jpg",
+      "sourceUrl": "/aicanfeel-diwali-party/textures/Hape_0003/256/Bronx_Fixed_Bronx_Black_BaseColor_A.jpg.jpg",
+      "kind": "color",
+      "sourceBytes": 25544,
+      "bytes": 3723,
+      "sourceDimensions": [
+        256,
+        256
+      ],
+      "dimensions": [
+        256,
+        256
+      ],
+      "quality": 85
+    },
+    "/aicanfeel-diwali-party/textures/Hape_0003/Bronx_Fixed_Bronx_Black_Normal.jpg": {
+      "url": "/aicanfeel-diwali-party/mobile-textures/textures/Hape_0003/512/Bronx_Fixed_Bronx_Black_Normal.jpg.jpg",
+      "sourceUrl": "/aicanfeel-diwali-party/textures/Hape_0003/512/Bronx_Fixed_Bronx_Black_Normal.jpg.jpg",
+      "kind": "normal",
+      "sourceBytes": 46774,
+      "bytes": 46774,
+      "sourceDimensions": [
+        512,
+        512
+      ],
+      "dimensions": [
+        512,
+        512
+      ],
+      "quality": "original"
+    },
+    "/aicanfeel-diwali-party/textures/Hape_0003/Bronx_Fixed_Bronx_Black_Invert_Metallic_Roughness.jpg": {
+      "url": "/aicanfeel-diwali-party/mobile-textures/textures/Hape_0003/256/Bronx_Fixed_Bronx_Black_Invert_Metallic_Roughness.jpg.jpg",
+      "sourceUrl": "/aicanfeel-diwali-party/textures/Hape_0003/256/Bronx_Fixed_Bronx_Black_Invert_Metallic_Roughness.jpg.jpg",
+      "kind": "material",
+      "sourceBytes": 53536,
+      "bytes": 6202,
+      "sourceDimensions": [
+        256,
+        256
+      ],
+      "dimensions": [
+        256,
+        256
+      ],
+      "quality": 85
+    },
+    "/aicanfeel-diwali-party/textures/Hape_0003/Shoe_Left_AO.jpg": {
+      "url": "/aicanfeel-diwali-party/mobile-textures/textures/Hape_0003/512/Shoe_Left_AO.jpg.jpg",
+      "sourceUrl": "/aicanfeel-diwali-party/textures/Hape_0003/512/Shoe_Left_AO.jpg.jpg",
+      "kind": "occlusion",
+      "sourceBytes": 39013,
+      "bytes": 33977,
+      "sourceDimensions": [
+        512,
+        512
+      ],
+      "dimensions": [
+        512,
+        512
+      ],
+      "quality": 85
+    },
+    "/aicanfeel-diwali-party/textures/Hape_0003/Model_B2_Shirt_Colorb.jpg": {
+      "url": "/aicanfeel-diwali-party/mobile-textures/textures/Hape_0003/1024/Model_B2_Shirt_Colorb.jpg.jpg",
+      "sourceUrl": "/aicanfeel-diwali-party/textures/Hape_0003/1024/Model_B2_Shirt_Colorb.jpg.jpg",
+      "kind": "color",
+      "sourceBytes": 248627,
+      "bytes": 208715,
+      "sourceDimensions": [
+        1024,
+        1024
+      ],
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "quality": 85
+    },
+    "/aicanfeel-diwali-party/textures/Hape_0003/Model_B2_Shirt_Normal.jpg": {
+      "url": "/aicanfeel-diwali-party/mobile-textures/textures/Hape_0003/2048/Model_B2_Shirt_Normal.jpg.jpg",
+      "sourceUrl": "/aicanfeel-diwali-party/textures/Hape_0003/2048/Model_B2_Shirt_Normal.jpg.jpg",
+      "kind": "normal",
+      "sourceBytes": 862631,
+      "bytes": 162864,
+      "sourceDimensions": [
+        2048,
+        2048
+      ],
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "quality": 85
+    },
+    "/aicanfeel-diwali-party/textures/Hape_0003/Shirt_AO.jpg": {
+      "url": "/aicanfeel-diwali-party/mobile-textures/textures/Hape_0003/1024/Shirt_AO.jpg.jpg",
+      "sourceUrl": "/aicanfeel-diwali-party/textures/Hape_0003/1024/Shirt_AO.jpg.jpg",
+      "kind": "occlusion",
+      "sourceBytes": 109612,
+      "bytes": 28265,
+      "sourceDimensions": [
+        1024,
+        1024
+      ],
+      "dimensions": [
+        512,
+        512
+      ],
+      "quality": 85
+    },
+    "/aicanfeel-diwali-party/textures/Hape_0003/Eyes_Red.jpg": {
+      "url": "/aicanfeel-diwali-party/mobile-textures/textures/Hape_0003/512/Eyes_Red.jpg.jpg",
+      "sourceUrl": "/aicanfeel-diwali-party/textures/Hape_0003/512/Eyes_Red.jpg.jpg",
+      "kind": "color",
+      "sourceBytes": 102934,
+      "bytes": 21433,
+      "sourceDimensions": [
+        512,
+        512
+      ],
+      "dimensions": [
+        512,
+        512
+      ],
+      "quality": 85
+    }
+  },
+  "totals": {
+    "entryCount": 20,
+    "sourceJpegBytes": 5222491,
+    "generatedJpegBytes": 1071673,
+    "savedBytes": 4150818,
+    "reductionPercent": 79.48,
+    "sourcePixels": 25034752,
+    "generatedPixels": 8519680
+  }
+}
