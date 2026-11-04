@@ -1,12 +1,12 @@
 # AICANFEEL Diwali Party
 
-Public site: https://global0809.github.io/aicanfeel-diwali-party/
+Public final v3: [AICANFEEL Diwali Party](https://global0809.github.io/aicanfeel-diwali-party/?v=final). Published and verified without signing in on 4 November 2026.
 
-6 November 2026, **8 PM IST**. Hosted by AICANFEEL at DU-131, PitamPura, New Delhi.
+**6 November 2026, 8 PM IST.** Hosted by **AICANFEEL** at **DU-131, PitamPura, New Delhi**. **DBYOB: Don’t Bring Your Own Booze.**
 
 ## Run
 
-Node.js is the only runtime dependency. GSAP and ScrollTrigger are vendored locally.
+Node.js is the only runtime dependency. GSAP and ScrollTrigger are vendored locally; no dependency installation is required.
 
 ```sh
 npm run build
@@ -14,38 +14,43 @@ npm run check
 npm run dev
 ```
 
-Local preview: http://127.0.0.1:4193/ . `node scripts/prepare-pages.mjs` prepares the GitHub Pages project-path edition under the sibling pages-preview folder. The published gh-pages branch contains that prepared static output. Source is on main.
+Local preview: `http://127.0.0.1:4193/`. `npm run pages` prepares the GitHub Pages project-path edition in the sibling `pages-preview` folder. The `gh-pages` branch serves the prepared static output; source is on `main`. The build applies guarded adaptations to the retained runtime. The check command checks JavaScript syntax; browser journeys are recorded separately.
 
 ## Experience
 
-The original HAPE gorilla, rig, outfit and native Vue/OGL rendering remain. A single monotonic camera path starts at an extreme face close-up and pulls wide while orbiting. A native 48-link gold chain carries raised Diwali / Party lettering and follows the Spine2 bone.
+The original HAPE gorilla, rig, outfit, fonts, and Vue/OGL renderer remain. Forward scrolling traverses the original **Camera_Splines_002** camera and target splines once, from progress 0 to 1. Their measured full orbit is **379.436836°**. Native light/scale choreography and pointer parallax remain. A 48-link thick gold chain carries solid raised **Diwali / Party** lettering and follows Spine2.
 
-The ending contains one Yayyyy button. It triggers finite Diwali fireworks and reveals an animated foil invitation pass. The pass can be downloaded as PNG. There is no name field, menu, calendar, directions control, RSVP service or admission system.
+The full-screen loader presents an animated orbital diya and rotating party quotes. Progress comes from native asset-completion events. Entry unlocks only after fonts settle, all 13 native skinned meshes are present, and three GL warmup frames have rendered. A model error or timeout offers retry and a quiet route directly to the invitation.
+
+**Enter the party — with sound** starts the reference’s original 19.252-second ambient loop from the click gesture. **Enter quietly** loads no audio. The header sound control can change the choice later. Audio is fetched on demand and reused from its cached buffer; it does not autoplay on module import.
+
+The ending contains one **Yayyyy** action. It triggers finite fireworks and reveals a hovering foil invitation pass: landscape on desktop, portrait on phones. The pass and its 1800 × 1080 PNG include the confirmed event details, DBYOB copy, and the cab-home note. There is no name entry, hamburger menu, calendar, directions control, RSVP service, or admission system.
 
 ## Phone budgets
 
-Phone rendering uses two fur shells, four bloom passes, a smaller chain mesh and adaptive DPR capped at 1. The renderer pauses when hidden or covered by the invitation. Twenty phone JPEG variants reduce their source JPEG weight from 5.22 MB to 1.07 MB. Native gzip buffers use DecompressionStream with raw-file fallback. Active phone binary resources fall from 6.07 MB to 2.54 MB. Original desktop texture URLs and source binaries remain intact.
+Phone rendering uses two fur shells, four bloom passes, a smaller chain mesh, and adaptive DPR capped at 1. Rendering pauses while hidden or covered by the invitation. Twenty phone JPEG variants reduce their source weight from 5.22 MB to 1.07 MB; active phone native binaries compress from 6.07 MB raw to 2.54 MB gzip. `DecompressionStream` has a raw-file fallback. Desktop source texture URLs and binaries remain intact.
 
-Hidden trailer, audio and debug texture requests are disabled. Reduced motion provides a static stage and instant invitation reveal without fireworks. Reduced transparency uses solid surfaces.
+Hidden reference trailer and debug texture requests are disabled. Original ambient audio is a separate opt-in request. Reduced motion holds a static native pose at progress .97, removes decorative movement and fireworks, and reveals the pass immediately. Reduced transparency supplies solid alternatives.
 
 ## Source guide
 
-- dist/index.html, diwali.css, diwali.js: story, copy, scroll orchestration and embers.
-- dist/invite-card.js/css: Yayyyy, fireworks, floating pass and PNG.
-- scripts/camera-runtime.mjs: camera and render budgets.
-- scripts/party-chain-runtime.mjs: native accessory integration.
-- scripts/build-party-chain.py: offline Blender geometry builder.
-- scripts/compressed-assets-runtime.mjs: native binary compression and loader fallback.
-- scripts/mobile-textures.py and mobile-textures-runtime.mjs: offline phone image generation and runtime selection.
-- scripts/adapt-reference.mjs: guarded runtime build.
-- scripts/prepare-pages.mjs: GitHub Pages router and asset prefix preparation.
+- `dist/index.html`, `diwali.css`, `diwali.js`: event copy, scroll, readiness gate, sound control, and embers.
+- `dist/party-loader.js/css`: loader, quotes, entry choices, error recovery, focus and scroll handling.
+- `dist/party-audio.js`: original ambient loop, gesture unlock, lazy loading, caching, and mute.
+- `dist/invite-card.js/css`: Yayyyy, fireworks, foil pass, DBYOB copy, and PNG.
+- `scripts/camera-runtime.mjs`: original spline traversal and render budgets.
+- `scripts/party-chain-runtime.mjs` and `build-party-chain.py`: native accessory integration and offline Blender builder.
+- `scripts/compressed-assets-runtime.mjs`: native binary compression and fallback.
+- `scripts/mobile-textures.py` and `mobile-textures-runtime.mjs`: phone assets and selection.
+- `scripts/adapt-reference.mjs`: guarded runtime generation.
+- `scripts/prepare-pages.mjs`: GitHub Pages project-path preparation.
 
 ## Validation and limits
 
-Desktop1440x900, touch390x844, 320px layout and reduced-motion journeys were checked. Both device contexts loaded 13 native skinned meshes, with no page errors, failed requests or horizontal overflow. The camera is monotonic, chain text reads Diwali Party, Yayyyy reveals the card, fireworks stop and PNG export works. See VERIFICATION.md for measured details.
+Final v3 browser journeys passed at 1440 × 900 desktop, touch-enabled 390 × 844, and 320 × 740. Checks cover the native full orbit, readiness gate, 13 meshes, quiet and sound entry, DBYOB pass, finite fireworks, PNG, reduced motion, and model-failure fallback. Quiet entry made zero audio requests; sound entry fetched the original ambient once and reused its buffer. Focused loader Lighthouse checks scored accessibility 100 and best practices 100. See `VERIFICATION.md` for scope.
 
-Browser emulation and laboratory scores do not certify physical-device frame rates or universal compatibility. The native 3D scene still carries a substantial model and shader workload.
+Browser emulation and lab scores do not establish physical-device FPS or universal compatibility. The retained native 3D scene still has a substantial model and shader workload. The published phone journey also passed, including sound, orbit, and card reveal with no page errors or failed assets.
 
 ## Provenance
 
-HAPE is the user-supplied visual authority: https://www.hape.io/ . The gorilla, native renderer, fonts and source assets are retained reference material. Camera direction, party accessory and invitation are adaptations. This project does not claim official HAPE affiliation or independent authorship of the retained assets.
+[HAPE](https://www.hape.io/) is the user-supplied visual authority. The gorilla, native renderer, fonts, original ambient audio, and source assets are retained reference material. Party copy, chain, loader, orchestration, and invitation are adaptations. This project does not claim official HAPE affiliation, independent authorship of retained assets, or certification of reuse rights. Earlier Sites publications remain separate.

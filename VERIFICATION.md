@@ -1,32 +1,34 @@
-# Verification, revision2
+# Verification — final v3
 
-4 November2026. Local Chromium through Playwright CLI, using the GitHub Pages project prefix.
+4 November 2026. Local Chromium browser checks used the GitHub Pages project-path edition. This record covers the final native-orbit, loader, audio, DBYOB, and invitation revision. [Final v3 is public on GitHub Pages](https://global0809.github.io/aicanfeel-diwali-party/?v=final).
 
-## Functional journeys
+## Final functional journeys
 
-- Desktop1440x900 and touch390x844: no page errors, failed requests or horizontal overflow.
-- 13 native skinned meshes: 11 original gorilla meshes and2 party accessory meshes. Pendant reads Diwali Party.
-- 101 camera samples confirmed increasing pullback distance, with finite poses. Continuous orbit does not reverse.
-- Phone loaded its smaller chain and20 phone textures. Desktop used original texture URLs.
-- All active native binaries loaded through gzip; no hidden trailer, audio or UV debug texture request remained.
-- Yayyyy revealed the pass; name fields, menu, calendar and directions controls were absent.
-- Fireworks ended automatically. PNG export rendered at1800x1080, with6November2026 at8PM IST.
-- 320px phone layout had no horizontal overflow. Reduced motion produced immediate card reveal, no fireworks and no card arrival animation.
-- A final phone spacing correction separates the details CTA from the fixed invitation pill.
-- JavaScript syntax checks and generated native runtime parsing passed. Gzip round-trip/fallback and native chain skeleton, normals, indices and rigid Spine2 weights were checked.
+- Desktop 1440 × 900, touch-enabled phone 390 × 844, and narrow phone 320 × 740 passed the final journeys, with no unexpected page errors or horizontal overflow.
+- The original `Hapes_0003_Rigged` scene contains 13 native skinned meshes: 11 original meshes and two gold-chain meshes. Solid pendant lettering reads Diwali Party.
+- The final camera uses the original **Camera_Splines_002** camera and target data over progress 0 → 1. Its measured full orbit is **379.436836°**.
+- The loader displays native resource progress and rotating quotes. Entry remains gated until fonts settle, all 13 meshes are present, and three GL warmup frames complete. Quotes do not spam the live region.
+- Quiet entry made **zero audio requests**. Sound entry requested the original 19.252-second ambient once and reused its cached buffer; the header toggle remained usable.
+- Yayyyy revealed the responsive foil pass. Finite fireworks ended automatically. The pass and 1800 × 1080 PNG contain 6 November 2026 at 8 PM IST and the DBYOB message, **Don’t Bring Your Own Booze**.
+- Name entry, hamburger, calendar, directions controls, RSVP service, and admission validation are absent.
+- The explicit negative model-failure journey passed: the loader reported failure and offered retry or a quiet route to a usable invitation, without falsely announcing model readiness.
+- Reduced-motion journeys passed: static native pose, no decorative loader/stage movement or fireworks, and immediate pass reveal. Scroll and page interaction were restored after entry/fallback.
+- Final guarded native build was deterministic and syntax checks passed. Prepared final assets passed smoke checks; cache-isolation review found no blockers.
 
-## Resource and lab measurements
+## Public delivery
 
-The measured phone context transferred6.89MB in resource bodies, versus the prior Lighthouse run's approximately19.6MiB total. Comparisons are approximate because the prior Lighthouse and phone contexts have different viewports and measurement accounting.
+GitHub Pages built `2320cee0aa1f4e6266df420ba91e1f6103dea958`, from application source `179f26ca32f258ef40d3ea991b0c55bd28435a3d`. Anonymous HTTP checks returned 200 for both the base URL and the final query URL, with the final loader and asset namespace present. Versioned final modules and `assets-final/` keep cached earlier modules separate.
 
-Native phone binaries:6.07MB raw →2.54MB gzip. Selected phone JPEG sources:5.22MB →1.07MB. Main original desktop textures remain unchanged. Rendering uses2 fur shells,4 bloom passes, and adaptive DPR at or below1; inactive rendering is paused.
+An unauthenticated 390 × 844 touch browser loaded all 13 meshes and reached loader progress 100 before entry. Audio requests before entry: zero. Sound entry played the original cached ambient (decoded duration 19.1875 seconds). Actual native scene progress followed scroll to .897; all sampled pose values were finite. Yayyyy revealed the DBYOB pass with `2026-11-06T20:00:00+05:30`; fireworks stopped. Name inputs: zero. Page errors, failed requests, and horizontal overflow: none.
 
-One revision2 Lighthouse mobile run: performance62, accessibility96 before its entrance-opacity contrast correction, best practices100. Speed index7.6s, total blocking6.19s, time to interactive14.5s, total transfer7,250KiB. Previous run: speed index9s, total blocking8.01s, time to interactive77.2s, transfer19,602KiB. The renderer still has a substantial initial model/shader workload.
+## Resource checks
 
-Mechanical design scan ran once. Its warnings included prior design-token drift and reference micro typography. Primary functional controls were raised to11px. Offscreen heading opacity was removed to preserve contrast during entrances.
+Phone profiles retain two fur shells, four bloom passes, adaptive DPR at or below 1, and paused rendering when hidden or covered. Phone chain geometry is 8,660 triangles across two meshes; desktop chain geometry is 22,736 triangles across two meshes. Native hierarchy, finite geometry, normals, indices, and rigid Spine2 weights were checked.
 
-## Scope
+Twenty phone JPEG sources compress from 5.22 MB to 1.07 MB. Active phone native binaries compress from 6.07 MB raw to 2.54 MB gzip, with a raw-file fallback. Desktop source texture URLs and binaries remain intact. Hidden reference trailer/debug requests are disabled; restored ambient audio is a separate consented request.
 
-These are browser and lab observations. They do not certify physical-device FPS, universal compatibility, manufacturing fit of the accessory, or pixel-identical equivalence. Retained HAPE assets preserve their reference provenance.
+## Lighthouse and measurement scope
 
-After removing the low-opacity heading entrance, a focused Lighthouse accessibility rerun scored100. Best practices scored100 in the full run. Performance was not rerun for that visual-only correction.
+Focused loader Lighthouse checks scored **accessibility 100** and **best practices 100**. These scores apply to the checked browser surface; no final-v3 performance score or physical-device FPS is asserted. Earlier revision measurements used different camera/loader states and are not promoted to final-v3 performance results.
+
+Browser emulation and laboratory checks do not certify physical-device frame rates, universal compatibility, or pixel-identical equivalence. The retained native 3D workload remains substantial. Retained HAPE character, runtime, fonts, assets, and original audio retain their reference provenance.
