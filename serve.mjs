@@ -3,7 +3,7 @@ import { readFile, stat } from 'node:fs/promises';
 import path from 'node:path';
 import { gzipSync } from 'node:zlib';
 
-const root = path.resolve('dist');
+const root = path.resolve(process.env.PREVIEW_ROOT || 'dist');
 const types = { '.html':'text/html; charset=utf-8', '.js':'text/javascript; charset=utf-8', '.css':'text/css; charset=utf-8', '.json':'application/json', '.svg':'image/svg+xml', '.png':'image/png', '.jpg':'image/jpeg', '.jpeg':'image/jpeg', '.webp':'image/webp', '.woff':'font/woff', '.woff2':'font/woff2', '.mp3':'audio/mpeg', '.mp4':'video/mp4', '.wasm':'application/wasm', '.ktx2':'image/ktx2' };
 const cache = new Map();
 http.createServer(async (req,res) => {
@@ -33,5 +33,5 @@ http.createServer(async (req,res) => {
     }
     res.end(req.method === 'HEAD' ? undefined : data);
   } catch { res.writeHead(404,{'Content-Type':'text/plain'}); res.end('Not found'); }
-}).listen(4193,'127.0.0.1',() => process.stdout.write('Local: http://127.0.0.1:4193\n'));
+}).listen(Number(process.env.PORT || 4193),'127.0.0.1',() => process.stdout.write('Local: http://127.0.0.1:'+(process.env.PORT || 4193)+'\n'));
 

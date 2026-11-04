@@ -1,0 +1,146 @@
+{
+  "version": 1,
+  "name": "Diwali Party thick gold link chain",
+  "word": "Diwali Party",
+  "bone": "mixamorig_Spine2",
+  "jointIndex": 15,
+  "boneCount": 41,
+  "linkCount": 48,
+  "linkDimensions": {
+    "majorRadius": 1.55,
+    "minorRadius": 0.9,
+    "tubeRadius": 0.48
+  },
+  "pendant": {
+    "word": "Diwali Party",
+    "lines": [
+      "Diwali",
+      "Party"
+    ],
+    "width": 26.4,
+    "height": 11.6,
+    "centerY": 116,
+    "backZ": 16.6,
+    "raisedLettering": true
+  },
+  "lettering": {
+    "desktop": [
+      {
+        "word": "Diwali",
+        "triangles": 2664,
+        "width": 21.8,
+        "height": 3.9
+      },
+      {
+        "word": "Party",
+        "triangles": 3624,
+        "width": 19.6,
+        "height": 3.9
+      }
+    ],
+    "mobile": [
+      {
+        "word": "Diwali",
+        "triangles": 1048,
+        "width": 21.8,
+        "height": 3.9
+      },
+      {
+        "word": "Party",
+        "triangles": 1356,
+        "width": 19.6,
+        "height": 3.9
+      }
+    ]
+  },
+  "materials": {
+    "Party_Chain_Gold": {
+      "albedoColor": "#e9b947",
+      "MetalicFactor": 1,
+      "RoughnessFactor": 0.24,
+      "IBL": 1
+    },
+    "Party_Chain_Recess": {
+      "albedoColor": "#100c08",
+      "MetalicFactor": 0.65,
+      "RoughnessFactor": 0.46,
+      "IBL": 1
+    }
+  },
+  "desktop": {
+    "assetBase": "glxp/models/Party_Chain_36e52c8dfa",
+    "meshCount": 2,
+    "vertices": 13252,
+    "triangles": 22736,
+    "binaryBytes": 1173968,
+    "assetHash": "36e52c8dfa",
+    "bounds": {
+      "Party_Chain_Gold": [
+        [
+          -16.83841323852539,
+          16.838363647460938
+        ],
+        [
+          110.2,
+          141.01951599121094
+        ],
+        [
+          -14.327208518981934,
+          18.43499999284744
+        ]
+      ],
+      "Party_Chain_Recess": [
+        [
+          -12.35,
+          12.35
+        ],
+        [
+          111.05,
+          120.95
+        ],
+        [
+          17.93,
+          18.055
+        ]
+      ]
+    }
+  },
+  "mobile": {
+    "assetBase": "glxp/models/Party_Chain_Mobile_f132a41b0d",
+    "meshCount": 2,
+    "vertices": 5262,
+    "triangles": 8660,
+    "binaryBytes": 461736,
+    "assetHash": "f132a41b0d",
+    "bounds": {
+      "Party_Chain_Gold": [
+        [
+          -16.83841323852539,
+          16.838363647460938
+        ],
+        [
+          110.2,
+          141.01951599121094
+        ],
+        [
+          -14.327208518981934,
+          18.414999997019766
+        ]
+      ],
+      "Party_Chain_Recess": [
+        [
+          -12.35,
+          12.35
+        ],
+        [
+          111.05,
+          120.95
+        ],
+        [
+          17.93,
+          18.055
+        ]
+      ]
+    }
+  }
+}

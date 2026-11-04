@@ -1,12 +1,12 @@
-# AICANFEEL Diwali Nights
+# AICANFEEL Diwali Party
 
-A separate invitation around the user-selected HAPE red experience. Event: **6 November 2026, 7:30 PM IST**, hosted by **AICANFEEL** at **DU-131, PitamPura, New Delhi**.
+Public site: https://global0809.github.io/aicanfeel-diwali-party/
 
-The original `Hapes_0003_Rigged` gorilla, outfit, materials, native animation, and Vue/OGL renderer remain. This copy removes the earlier added chain and theme switching, adds a Diwali scroll story, and ends with a personal invitation. It does not change the previous sites.
+6 November 2026, **8 PM IST**. Hosted by AICANFEEL at DU-131, PitamPura, New Delhi.
 
-## Run locally
+## Run
 
-Use Node.js; no dependency installation is required.
+Node.js is the only runtime dependency. GSAP and ScrollTrigger are vendored locally.
 
 ```sh
 npm run build
@@ -14,34 +14,38 @@ npm run check
 npm run dev
 ```
 
-Open `http://127.0.0.1:4193`. The server serves `dist/` and supports media byte ranges. The build adapts the supplied runtime; it is not a fresh framework compilation. The check command checks JavaScript syntax, not browser behavior.
+Local preview: http://127.0.0.1:4193/ . `node scripts/prepare-pages.mjs` prepares the GitHub Pages project-path edition under the sibling pages-preview folder. The published gh-pages branch contains that prepared static output. Source is on main.
 
-## Files to edit
+## Experience
 
-- `dist/index.html`: event copy, sections, and runtime loading.
-- `dist/diwali.css` and `dist/diwali.js`: overlay, menu, scroll choreography, and accessibility behavior.
-- `dist/invite-card.css` and `dist/invite-card.js`: preview, PNG, sharing, calendar, and directions.
-- `vendor/reference-runtime.js`: retained runtime input; preserve the character and rendering identity.
-- `scripts/adapt-reference.mjs`: guarded transformations that generate `dist/assets/index.diwali-red-v1.js` and the retained runtime alias. Change adaptations here instead of editing generated runtime files.
-- `dist/vendor/`: vendored GSAP and ScrollTrigger.
-- `PRODUCT.md`, `DESIGN.md`, and `.impeccable/`: product truth, extracted visual guidance, and review evidence.
+The original HAPE gorilla, rig, outfit and native Vue/OGL rendering remain. A single monotonic camera path starts at an extreme face close-up and pulls wide while orbiting. A native 48-link gold chain carries raised Diwali / Party lettering and follows the Spine2 bone.
 
-Fonts and 3D assets are local. Legacy files in the copied distribution are not a list of active features; the current HTML loads the Diwali runtime.
+The ending contains one Yayyyy button. It triggers finite Diwali fireworks and reveals an animated foil invitation pass. The pass can be downloaded as PNG. There is no name field, menu, calendar, directions control, RSVP service or admission system.
 
-## Invitation behavior
+## Phone budgets
 
-The `<diwali-invite>` element previews a guest name, saves a 1200 × 1530 PNG, copies a URL using `#invitation?guest=...`, downloads an `.ics` file, and opens Google Maps directions. Names are normalized and limited to 48 Unicode code points. A fragment restores the personal preview on reload. Clipboard failure exposes selected text for manual copying.
+Phone rendering uses two fur shells, four bloom passes, a smaller chain mesh and adaptive DPR capped at 1. The renderer pauses when hidden or covered by the invitation. Twenty phone JPEG variants reduce their source JPEG weight from 5.22 MB to 1.07 MB. Native gzip buffers use DecompressionStream with raw-file fallback. Active phone binary resources fall from 6.07 MB to 2.54 MB. Original desktop texture URLs and source binaries remain intact.
 
-These are browser-side tools. There is no RSVP, guest database, backend, or admission check; the code is decorative. The calendar start is `2026-11-06T14:00:00Z`, equivalent to 7:30 PM IST. No unconfirmed end time is supplied.
+Hidden trailer, audio and debug texture requests are disabled. Reduced motion provides a static stage and instant invitation reveal without fireworks. Reduced transparency uses solid surfaces.
+
+## Source guide
+
+- dist/index.html, diwali.css, diwali.js: story, copy, scroll orchestration and embers.
+- dist/invite-card.js/css: Yayyyy, fireworks, floating pass and PNG.
+- scripts/camera-runtime.mjs: camera and render budgets.
+- scripts/party-chain-runtime.mjs: native accessory integration.
+- scripts/build-party-chain.py: offline Blender geometry builder.
+- scripts/compressed-assets-runtime.mjs: native binary compression and loader fallback.
+- scripts/mobile-textures.py and mobile-textures-runtime.mjs: offline phone image generation and runtime selection.
+- scripts/adapt-reference.mjs: guarded runtime build.
+- scripts/prepare-pages.mjs: GitHub Pages router and asset prefix preparation.
 
 ## Validation and limits
 
-Recorded local browser QA covers desktop at 1440 × 900 and a touch-enabled phone viewport at 390 × 844: no page errors or horizontal overflow, 11 native meshes, and one red compositor. Name restoration, PNG download, and calendar export were checked. Evidence and export samples live in `.impeccable/review/`.
+Desktop1440x900, touch390x844, 320px layout and reduced-motion journeys were checked. Both device contexts loaded 13 native skinned meshes, with no page errors, failed requests or horizontal overflow. The camera is monotonic, chain text reads Diwali Party, Yayyyy reveals the card, fireworks stop and PNG export works. See VERIFICATION.md for measured details.
 
-Reduced motion holds the stage at `.99`, freezes native animation time, removes the veil, and disables decorative motion. Reduced transparency supplies solid closing surfaces. Browser emulation does not establish physical-device GPU speed or FPS. Public deployment and unauthenticated access require separate verification.
+Browser emulation and laboratory scores do not certify physical-device frame rates or universal compatibility. The native 3D scene still carries a substantial model and shader workload.
 
-One Lighthouse mobile-preset run scored performance 61, accessibility 100, and best practices 100. The retained native 3D pipeline remains heavy: approximately 19.6 MB transferred, 9 s speed index, 8.01 s total blocking time, and 77.2 s time to interactive under laboratory throttling. These are single-run lab measurements, separate from the passing functional and emulated-layout checks.
+## Provenance
 
-## Reference provenance
-
-The visual authority is [HAPE](https://www.hape.io/), supplied through its [Awwwards reference](https://www.awwwards.com/sites/hape). The gorilla, reference runtime, fonts, and related assets are retained reference material; the Diwali overlay and invitation are adaptations. This project does not claim independent authorship of those assets, official HAPE affiliation, or certification of reuse rights.
+HAPE is the user-supplied visual authority: https://www.hape.io/ . The gorilla, native renderer, fonts and source assets are retained reference material. Camera direction, party accessory and invitation are adaptations. This project does not claim official HAPE affiliation or independent authorship of the retained assets.

@@ -1,1 +1,12 @@
-{"name":"aicanfeel-diwali-red-glass","version":"1.0.0","private":true,"type":"module","scripts":{"dev":"node serve.mjs","build":"node scripts/adapt-reference.mjs","check":"node --check dist/diwali.js && node --check dist/invite-card.js && node --check dist/assets/index.diwali-red-v1.js"}}
+{
+  "name": "aicanfeel-diwali-party",
+  "version": "2.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node serve.mjs",
+    "build": "node scripts/adapt-reference.mjs",
+    "check": "node --check dist/diwali.js && node --check dist/invite-card.js && node --check dist/assets/index.diwali-red-v1.js",
+    "pages": "node scripts/prepare-pages.mjs"
+  }
+}

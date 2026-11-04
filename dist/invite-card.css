@@ -1,49 +1,64 @@
-diwali-invite{display:block;color:#fff7ef;font-family:"Neue Plak Extended",Arial,sans-serif;--invite-white:#fff7ef;--invite-gold:#f4c989;--invite-muted:#eac6c3;--invite-border:rgba(255,240,226,.27)}
+diwali-invite{display:block;position:relative;color:#fff4e7;font-family:"Neue Plak Extended",sans-serif;--pass-white:#fff4e7;--pass-gold:#f7d49b;--pass-muted:#eac3b5;--pass-line:rgba(247,212,155,.34)}
 diwali-invite *{box-sizing:border-box}
-.diwali-invite-layout{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1fr);gap:9vw;align-items:center;width:min(1220px,100%);margin:0 auto}
-.diwali-invite-editor{min-width:0;max-width:460px}
-.diwali-invite-editor h2{font:800 clamp(34px,4vw,62px)/.98 "Integral CF",sans-serif;letter-spacing:-.035em;text-transform:uppercase;margin:0 0 28px;text-wrap:balance}
-.diwali-invite-editor>p{font-size:14px;line-height:1.65;color:var(--invite-muted);max-width:34ch;margin:0 0 38px}
-.diwali-name-label{display:block;font:700 10px/1.5 "Druk Text Wide",sans-serif;text-transform:uppercase;letter-spacing:.035em;margin-bottom:13px}
-.diwali-name-field{display:flex;align-items:center;border-bottom:1px solid var(--invite-border);margin-bottom:27px;transition:border-color .2s}
-.diwali-name-field:focus-within{border-color:var(--invite-gold)}
-.diwali-name-field input{width:100%;min-width:0;border:0;background:transparent;border-radius:0;color:var(--invite-white);font:400 17px/1.6 "Neue Plak Extended",sans-serif;padding:10px 0 16px;caret-color:var(--invite-gold);outline:0}
-.diwali-name-field input::placeholder{color:#d5b0ad;opacity:1}
-.diwali-invite-actions{display:flex;flex-wrap:wrap;align-items:center;gap:18px}
-.diwali-invite-button{cursor:pointer;appearance:none;display:inline-flex;justify-content:center;align-items:center;gap:18px;min-height:48px;border:0;border-radius:100px;background:var(--invite-white);color:#46090d;padding:16px 23px;font:700 10px/1.4 "Druk Text Wide",sans-serif;text-transform:uppercase;transition:background .2s,transform .2s}
-.diwali-invite-button:hover{background:var(--invite-gold);transform:translateY(-2px)}
-.diwali-invite-button:disabled{opacity:.6;cursor:wait;transform:none}
-.diwali-invite-button svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:1.7}
-.diwali-invite-textbutton{appearance:none;background:transparent;border:0;border-bottom:1px solid var(--invite-border);border-radius:0;padding:9px 0;color:var(--invite-white);font:400 11px/1.5 "Neue Plak Extended",sans-serif;cursor:pointer;text-align:left;text-decoration:none;transition:color .2s,border-color .2s}
-.diwali-invite-textbutton:hover{color:var(--invite-gold);border-color:var(--invite-gold)}
-.diwali-invite-tools{display:flex;gap:26px;flex-wrap:wrap;margin-top:10px}
-.diwali-invite-status{font:400 11px/1.65 "Neue Plak Extended",sans-serif;color:var(--invite-gold);min-height:35px;margin:17px 0 0;max-width:40ch}
-.diwali-link-fallback{display:none;background:transparent;border:1px solid var(--invite-border);color:var(--invite-white);width:100%;padding:12px;font:400 11px/1.5 "Neue Plak Extended",sans-serif;margin-bottom:15px}
-.diwali-link-fallback[data-visible]{display:block}
-.diwali-invite-card-wrap{perspective:1200px;padding:18px 8px 25px;min-width:0}
-.diwali-invite-card{position:relative;isolation:isolate;overflow:hidden;width:min(100%,480px);margin:auto;padding:32px;min-height:610px;display:flex;flex-direction:column;border:1px solid rgba(255,225,200,.42);border-radius:14px;background:linear-gradient(145deg,rgba(227,117,104,.15),rgba(102,14,23,.4) 40%,rgba(222,94,76,.14));backdrop-filter:blur(20px) saturate(115%);-webkit-backdrop-filter:blur(20px) saturate(115%);transform:rotate(2deg);color:var(--invite-white)}
-.diwali-invite-card:before{content:"";position:absolute;z-index:-1;inset:0;pointer-events:none;background:linear-gradient(126deg,rgba(255,233,216,.18),transparent 33%,transparent 64%,rgba(255,223,195,.07));border-radius:inherit}
-.diwali-card-top{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;font:700 8px/1.5 "Druk Text Wide",sans-serif;letter-spacing:.02em;text-transform:uppercase;padding-bottom:19px;border-bottom:1px solid var(--invite-border)}
-.diwali-card-top span:last-child{font-family:"Neue Plak Extended",sans-serif;font-size:9px;font-weight:400;color:var(--invite-gold);white-space:nowrap}
-.diwali-card-main{position:relative;flex:1;padding:48px 0 30px}
-.diwali-card-light{position:absolute;right:-48px;top:42px;width:195px;height:195px;border:1px solid rgba(244,201,137,.36);border-radius:50%;transform:rotateX(53deg) rotateZ(-24deg);pointer-events:none;z-index:-1}
-.diwali-card-light:before,.diwali-card-light:after{content:"";position:absolute;inset:18px;border:1px solid rgba(244,201,137,.3);border-radius:50%}
-.diwali-card-light:after{inset:36px}
-.diwali-card-main h3{font:800 clamp(31px,3.65vw,54px)/.98 "Integral CF",sans-serif;letter-spacing:-.035em;text-transform:uppercase;margin:0 0 24px}
-.diwali-card-message{font:700 8px/1.7 "Druk Text Wide",sans-serif;max-width:30ch;text-transform:uppercase;letter-spacing:.02em;color:var(--invite-gold);margin:0 0 31px}
-.diwali-card-for{font:400 10px/1.6 "Neue Plak Extended",sans-serif;margin:0 0 6px;color:var(--invite-muted)}
-.diwali-card-name{display:block;font:600 clamp(19px,2.1vw,29px)/1.2 "Neue Plak Extended","Nirmala UI",sans-serif;letter-spacing:-.025em;overflow-wrap:anywhere;max-width:100%;min-height:1.2em}
-.diwali-card-facts{display:grid;grid-template-columns:1fr 1fr;gap:18px;border-top:1px solid var(--invite-border);padding:21px 0}
-.diwali-card-facts span{display:block;font:700 7px/1.5 "Druk Text Wide",sans-serif;letter-spacing:.03em;text-transform:uppercase;color:var(--invite-gold);margin-bottom:9px}
-.diwali-card-facts strong{display:block;font:800 clamp(17px,1.6vw,23px)/1.1 "Integral CF",sans-serif;letter-spacing:-.03em;white-space:nowrap}
-.diwali-card-venue{border-top:1px solid var(--invite-border);padding-top:18px}
-.diwali-card-venue p{margin:0 0 5px;font:400 10px/1.7 "Neue Plak Extended",sans-serif;color:var(--invite-muted)}
-.diwali-card-venue strong{color:var(--invite-white);font-weight:600}
-.diwali-card-venue address{font:400 10px/1.7 "Neue Plak Extended",sans-serif;font-style:normal;color:var(--invite-white)}
-.diwali-card-footer{font:700 6px/1.6 "Druk Text Wide",sans-serif;letter-spacing:.03em;text-transform:uppercase;color:var(--invite-gold);display:flex;justify-content:space-between;gap:20px;padding-top:25px}
-diwali-invite a:focus-visible,diwali-invite button:focus-visible,diwali-invite input:focus-visible{outline:2px solid var(--invite-gold);outline-offset:6px}
-diwali-invite ::selection{background:var(--invite-gold);color:#46090d}
-@media(max-width:900px){.diwali-invite-layout{gap:5vw}.diwali-invite-card{padding:25px;min-height:560px}.diwali-card-main h3{font-size:4.2vw}.diwali-card-top{font-size:7px}.diwali-card-facts strong{font-size:17px}.diwali-invite-editor h2{font-size:4.6vw}}
-@media(max-width:650px){.diwali-invite-layout{grid-template-columns:minmax(0,1fr);gap:26px}.diwali-invite-editor{max-width:100%}.diwali-invite-editor h2{font-size:clamp(31px,9vw,44px);max-width:11ch;margin-bottom:23px}.diwali-invite-editor>p{font-size:13px;max-width:32ch;margin-bottom:28px}.diwali-invite-card-wrap{padding:20px 8px}.diwali-invite-card{max-width:425px;min-height:555px;padding:25px;transform:rotate(1.5deg)}.diwali-card-main{padding-top:43px}.diwali-card-main h3{font-size:clamp(29px,8.15vw,44px)}.diwali-card-top{font-size:7px}.diwali-card-facts strong{font-size:clamp(16px,4.8vw,22px)}.diwali-card-name{font-size:23px}.diwali-card-footer{font-size:5.5px}.diwali-card-venue address{font-size:10px}.diwali-invite-button{padding:16px 20px;gap:13px;font-size:9px}.diwali-invite-actions{gap:20px}.diwali-invite-status{min-height:20px}}
-@media(prefers-reduced-motion:reduce){.diwali-invite-card{transform:none}.diwali-invite-button{transition:none}.diwali-invite-button:hover{transform:none}}
-@media(prefers-reduced-transparency:reduce){.diwali-invite-card{background:#711922;backdrop-filter:none;-webkit-backdrop-filter:none}}
+diwali-invite [hidden]{display:none!important}
+.diwali-invite-ritual{min-height:58dvh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:40px 0 70px}
+.diwali-invite-ritual h2{font:800 clamp(31px,4.1vw,60px)/.97 "Integral CF",sans-serif;letter-spacing:-.035em;text-transform:uppercase;max-width:14ch;margin:0 0 29px;text-wrap:balance}
+.diwali-invite-ritual p{font:400 12px/1.7 "Neue Plak Extended",sans-serif;color:var(--pass-muted);margin:0 0 38px}
+.diwali-yay-button{position:relative;appearance:none;border:1px solid rgba(255,255,255,.8);cursor:pointer;padding:20px 44px 23px;border-radius:100px;font:800 clamp(25px,3vw,40px)/1.1 "Integral CF",sans-serif;letter-spacing:-.035em;color:#4d0a0e;background:linear-gradient(110deg,#fff5df,#f7d49b);box-shadow:0 11px 34px rgba(22,0,6,.35),inset 0 0 0 4px rgba(255,247,228,.55);transition:transform .35s cubic-bezier(.16,1,.3,1),background .25s}
+.diwali-yay-button:hover{transform:translateY(-4px) scale(1.025);background:var(--pass-white)}
+.diwali-yay-button:active{transform:translateY(0) scale(.98)}
+.diwali-yay-button:disabled{cursor:default}
+.diwali-invite-reveal{width:min(1120px,100%);margin:0 auto;perspective:1600px}
+.diwali-pass-stage{transform-origin:50% 70%;animation:diwali-pass-arrive 1.65s cubic-bezier(.16,1,.3,1) both}
+.diwali-pass-floating{animation:diwali-pass-hover 6.5s ease-in-out 1.7s infinite;animation-play-state:paused}
+diwali-invite.is-visible .diwali-pass-floating{animation-play-state:running}
+.diwali-party-pass{position:relative;isolation:isolate;display:grid;grid-template-columns:minmax(0,1fr) 245px;overflow:hidden;min-height:610px;border:1px solid transparent;border-radius:18px;padding:0;background:linear-gradient(122deg,rgba(139,43,36,.82),rgba(58,9,18,.86) 53%,rgba(128,33,31,.78)) padding-box,linear-gradient(125deg,#ffe8b8,rgba(255,240,213,.22) 22%,#b57046 58%,#ffecba 80%,rgba(255,240,213,.3)) border-box;backdrop-filter:blur(18px) saturate(120%);-webkit-backdrop-filter:blur(18px) saturate(120%);color:var(--pass-white);transform:rotateX(var(--pass-tilt-x,0deg)) rotateY(var(--pass-tilt-y,0deg));transition:transform .6s cubic-bezier(.16,1,.3,1);box-shadow:0 32px 70px rgba(21,0,6,.45)}
+.diwali-party-pass:before{content:"";position:absolute;z-index:-1;inset:12px;border:1px solid rgba(255,229,181,.22);border-radius:9px;pointer-events:none}
+.diwali-pass-refraction{position:absolute;inset:0;overflow:hidden;z-index:-1;pointer-events:none;background:radial-gradient(ellipse at 26% 8%,rgba(255,215,151,.13),transparent 53%)}
+.diwali-pass-refraction:before{content:"";position:absolute;top:-50%;left:-70%;width:37%;height:200%;background:linear-gradient(90deg,transparent,rgba(255,243,212,.12) 37%,rgba(255,251,227,.32) 48%,rgba(247,212,155,.06) 65%,transparent);transform:rotate(-24deg);animation:diwali-foil-sweep 2.5s cubic-bezier(.16,1,.3,1) .12s both}
+.diwali-pass-refraction:after{content:"";position:absolute;width:600px;height:1px;left:3%;top:43%;background:linear-gradient(90deg,transparent,rgba(255,224,179,.36),transparent);transform:rotate(-31deg)}
+.diwali-pass-body{position:relative;padding:36px 38px 34px;display:flex;flex-direction:column;min-width:0}
+.diwali-pass-brandline{display:flex;justify-content:space-between;gap:24px;align-items:center;margin-bottom:43px}
+.diwali-pass-host{font:600 18px/1.2 "Neue Plak Extended",sans-serif;letter-spacing:-.035em;text-transform:lowercase}
+.diwali-pass-brandline>span:last-child{font:700 7px/1.5 "Druk Text Wide",sans-serif;letter-spacing:.025em;color:var(--pass-gold);text-transform:uppercase;text-align:right}
+.diwali-pass-title{font:800 clamp(58px,8.2vw,112px)/.88 "Integral CF",sans-serif;letter-spacing:-.04em;text-transform:uppercase;margin:0;position:relative}
+.diwali-pass-title span{display:block}
+.diwali-pass-title span:last-child{color:var(--pass-gold)}
+.diwali-pass-wit{font:700 clamp(8px,.8vw,11px)/1.8 "Druk Text Wide",sans-serif;letter-spacing:.01em;text-transform:uppercase;color:var(--pass-white);margin:26px 0 0;max-width:40ch}
+.diwali-pass-bottom{margin-top:auto;padding-top:42px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:22px;align-items:end}
+.diwali-pass-place{min-width:0}
+.diwali-pass-place>span{display:block;font:700 7px/1.5 "Druk Text Wide",sans-serif;letter-spacing:.03em;color:var(--pass-gold);text-transform:uppercase;margin-bottom:10px}
+.diwali-pass-place address{font:400 11px/1.7 "Neue Plak Extended",sans-serif;font-style:normal;max-width:28ch}
+.diwali-pass-rsvp{font:400 10px/1.7 "Neue Plak Extended",sans-serif;margin:0;color:var(--pass-muted);text-align:right;max-width:18ch}
+.diwali-pass-stub{position:relative;display:flex;flex-direction:column;justify-content:space-between;padding:38px 28px 34px;border-left:1px dashed rgba(247,212,155,.38);background:linear-gradient(180deg,rgba(255,211,141,.08),rgba(23,1,8,.2))}
+.diwali-pass-stub:before,.diwali-pass-stub:after{content:"";position:absolute;left:-9px;top:-9px;width:17px;height:17px;border:1px solid var(--pass-gold);border-radius:50%;background:#2b0710}
+.diwali-pass-stub:after{top:auto;bottom:-9px}
+.diwali-pass-stub-label{font:700 7px/1.7 "Druk Text Wide",sans-serif;letter-spacing:.025em;text-transform:uppercase;color:var(--pass-gold);margin:0}
+.diwali-pass-date{display:block;margin:0}
+.diwali-pass-date strong{display:block;font:800 106px/.92 "Integral CF",sans-serif;letter-spacing:-.04em}
+.diwali-pass-date span{display:block;font:800 22px/1.3 "Integral CF",sans-serif;letter-spacing:-.025em;margin-top:10px}
+.diwali-pass-date small{display:block;font:400 9px/1.6 "Neue Plak Extended",sans-serif;color:var(--pass-muted);margin-top:10px}
+.diwali-pass-time{border-top:1px solid var(--pass-line);padding-top:22px}
+.diwali-pass-time strong{font:800 36px/1 "Integral CF",sans-serif;letter-spacing:-.03em;white-space:nowrap}
+.diwali-pass-time span{display:block;font:700 7px/1.7 "Druk Text Wide",sans-serif;color:var(--pass-gold);text-transform:uppercase;letter-spacing:.02em;margin-top:9px}
+.diwali-pass-note{font:400 9px/1.7 "Neue Plak Extended",sans-serif;color:var(--pass-muted);margin:0;max-width:22ch}
+.diwali-pass-tools{display:flex;flex-direction:column;align-items:center;gap:15px;text-align:center;margin-top:35px;opacity:0;transform:translateY(12px);pointer-events:none;transition:opacity .7s,transform .7s}
+diwali-invite.reveal-finished .diwali-pass-tools{opacity:1;transform:none;pointer-events:auto}
+.diwali-save-pass{appearance:none;cursor:pointer;border:0;border-radius:100px;background:var(--pass-white);color:#46090d;padding:17px 23px;display:inline-flex;align-items:center;justify-content:center;gap:22px;min-height:47px;font:700 9px/1.4 "Druk Text Wide",sans-serif;text-transform:uppercase;transition:background .2s,transform .25s}
+.diwali-save-pass:hover{background:var(--pass-gold);transform:translateY(-2px)}
+.diwali-save-pass:disabled{opacity:.65;cursor:wait;transform:none}
+.diwali-save-pass svg{height:17px;width:17px;fill:none;stroke:currentColor;stroke-width:1.6}
+.diwali-pass-status{font:400 10px/1.6 "Neue Plak Extended",sans-serif;color:var(--pass-gold);min-height:16px;margin:0}
+.diwali-invite-fireworks{position:fixed;inset:0;width:100%;height:100%;z-index:25;pointer-events:none}
+diwali-invite button:focus-visible{outline:2px solid var(--pass-gold);outline-offset:7px}
+.diwali-party-pass:focus{outline:none}
+diwali-invite ::selection{background:var(--pass-gold);color:#46090d}
+@keyframes diwali-pass-arrive{0%{opacity:0;transform:translateY(90px) rotateX(17deg) rotateY(-20deg) rotateZ(-5deg) scale(.78);filter:blur(8px)}45%{opacity:1;filter:blur(0)}100%{opacity:1;transform:translateY(0) rotateX(0) rotateY(0) rotateZ(0) scale(1);filter:blur(0)}}
+@keyframes diwali-pass-hover{0%,100%{transform:translateY(0) rotate(-.35deg)}50%{transform:translateY(-11px) rotate(.35deg)}}
+@keyframes diwali-foil-sweep{0%{left:-70%;opacity:0}12%{opacity:1}100%{left:150%;opacity:.4}}
+@media(max-width:1050px){.diwali-party-pass{grid-template-columns:minmax(0,1fr) 205px;min-height:560px}.diwali-pass-body{padding:30px}.diwali-pass-stub{padding:32px 25px}.diwali-pass-date strong{font-size:88px}.diwali-pass-title{font-size:8.2vw}.diwali-pass-host{font-size:16px}.diwali-pass-bottom{grid-template-columns:1fr}.diwali-pass-rsvp{display:none}.diwali-pass-brandline{margin-bottom:44px}.diwali-pass-time strong{font-size:31px}.diwali-pass-place address{font-size:10px}.diwali-pass-note{font-size:8px}}
+@media(max-width:650px){.diwali-invite-ritual{min-height:55dvh;padding:25px 0 60px}.diwali-invite-ritual h2{font-size:clamp(29px,8.3vw,42px);margin-bottom:23px}.diwali-invite-ritual p{font-size:11px;max-width:28ch;margin-bottom:31px}.diwali-yay-button{font-size:30px;padding:22px 36px 24px}.diwali-invite-reveal{max-width:450px}.diwali-party-pass{display:flex;flex-direction:column;min-height:0;border-radius:16px}.diwali-party-pass:before{inset:9px;border-radius:7px}.diwali-pass-body{padding:29px 26px 27px;min-height:480px}.diwali-pass-brandline{gap:15px;margin-bottom:49px;align-items:flex-start}.diwali-pass-host{font-size:17px}.diwali-pass-brandline>span:last-child{font-size:6px;max-width:12ch;line-height:1.6}.diwali-pass-title{font-size:clamp(51px,13.1vw,72px);line-height:.91}.diwali-pass-wit{font-size:8px;margin-top:26px;max-width:30ch}.diwali-pass-bottom{padding-top:38px;display:block}.diwali-pass-place>span{font-size:6px;margin-bottom:8px}.diwali-pass-place address{font-size:10px;max-width:31ch}.diwali-pass-stub{display:grid;grid-template-columns:1fr 1fr;gap:20px;padding:27px 26px 29px;border-left:0;border-top:1px dashed rgba(247,212,155,.38)}.diwali-pass-stub:before{left:-9px;top:-9px}.diwali-pass-stub:after{left:auto;right:-9px;top:-9px;bottom:auto}.diwali-pass-stub-label,.diwali-pass-note{display:none}.diwali-pass-date strong{font-size:53px;display:inline}.diwali-pass-date span{display:inline;font-size:17px;margin:0 0 0 8px}.diwali-pass-date small{font-size:7px;margin-top:8px}.diwali-pass-time{border:0;padding:3px 0 0}.diwali-pass-time strong{font-size:34px;display:block}.diwali-pass-time span{font-size:6px;margin-top:10px}.diwali-pass-tools{margin-top:28px}.diwali-save-pass{font-size:8px;padding:17px 21px}.diwali-pass-refraction:after{top:36%;left:-130px;width:600px}}
+@media(max-width:370px){.diwali-pass-body{padding:27px 22px;min-height:455px}.diwali-pass-title{font-size:13vw}.diwali-pass-host{font-size:15px}.diwali-pass-brandline{margin-bottom:43px}.diwali-pass-stub{padding:25px 22px;gap:16px}.diwali-pass-date strong{font-size:46px}.diwali-pass-date span{font-size:15px;margin-left:5px}.diwali-pass-time strong{font-size:30px}}
+@media(prefers-reduced-motion:reduce){.diwali-pass-stage,.diwali-pass-floating,.diwali-pass-refraction:before{animation:none}.diwali-party-pass{transform:none;transition:none}.diwali-yay-button,.diwali-save-pass,.diwali-pass-tools{transition:none}.diwali-yay-button:hover,.diwali-save-pass:hover{transform:none}.diwali-pass-refraction:before{display:none}}
+@media(prefers-reduced-transparency:reduce){.diwali-party-pass{backdrop-filter:none;-webkit-backdrop-filter:none;background:linear-gradient(125deg,#852c2a,#410e1b) padding-box,linear-gradient(125deg,#ffe8b8,#b57046 60%,#ffecba) border-box}}
+.diwali-save-pass{font-size:11px}.diwali-pass-place address{font-size:12px}

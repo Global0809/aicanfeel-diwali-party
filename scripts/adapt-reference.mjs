@@ -1,6 +1,9 @@
 import fs from 'node:fs';
+import {applyMobileTexturesRuntime} from './mobile-textures-runtime.mjs';
 import path from 'node:path';
-
+import { applyCameraRuntime } from './camera-runtime.mjs';
+import { applyPartyChainRuntime } from './party-chain-runtime.mjs';
+import { prepareCompressedNativeAssets, applyCompressedAssetsRuntime } from './compressed-assets-runtime.mjs';
 
 const original = path.resolve('vendor/reference-runtime.js');
 let source = fs.readFileSync(original,'utf8');
@@ -11,9 +14,15 @@ function replace(before,after,expected=1) {
   source = source.split(before).join(after);
 }
 replace('value:eV()||ZU()', 'value:"red"');
-// The Diwali surface drives the retained camera path from its own scroll narrative.
-replace('this.scroll=window.pageYOffset/(this.scrollHeight-this.pageHeight)', 'this.scroll=window.DIWALI_PROGRESS??.99');
+// One scroll progress value controls the complete close-up to wide orbit.
+replace('this.scroll=window.pageYOffset/(this.scrollHeight-this.pageHeight)', 'this.scroll=window.DIWALI_CAMERA?.progress??0');
 replace('const TC=["red","black","white"]','const TC=["red"]');
+// The invitation has no trailer or audio controls. Prevent hidden reference
+// media from downloading while leaving model/file loader promises intact.
+replace('sound:!0,loader:', 'sound:!1,loader:', 3);
+replace('trailer720(){var t;return(t=this.data.navigation)==null?void 0:t.trailer.trailer720}', 'trailer720(){return null}');
+replace('trailer1080(){var t;return(t=this.data.navigation)==null?void 0:t.trailer.trailer1080}', 'trailer1080(){return null}');
+replace('this.isKonami=!1,new HW(()=>{this.onKonami()})', 'this.isKonami=!1');
 // Select red for the very first composited frame as well as the saved theme.
 replace('this.activeTextures=["hape_1","hape_2"]','this.activeTextures=["hape_2","hape_3"]');
 replace('this.activeTextureId=0,this.textures={','this.activeTextureId=1,this.textures={');
@@ -31,7 +40,6 @@ replace('creator:"Styled by {name}"','creator:"Reference by {name}"');
 // Retain valid frame delta: native animation arithmetic divides by dt. Freeze
 // its clock directly so reduced motion cannot introduce 0 * Infinity / NaNs.
 replace('this.time+=li.dt/1e3,this.dt=li.dt','this.time+=window.AICANFEEL_REDUCED_MOTION?0:li.dt/1e3,this.dt=li.dt');
-replace('initEnterChoregraphy(){this.cameraManager.offset.x=2','initEnterChoregraphy(){if(window.AICANFEEL_REDUCED_MOTION){this.cameraManager.offset.x=0;this.cameraManager.offset.z=0;this.post.config.Exposure.value=.1;return;}this.cameraManager.offset.x=2');
 replace('this.config.Pause.value||(this.animTime+=','(window.AICANFEEL_REDUCED_MOTION||this.config.Pause.value)||(this.animTime+=');
 // Read-only scene inspection and explicit QA pause; no pose/lighting changes.
 replace('this.bloomPass=new eJ(this,this.post)','window.AICANFEEL_ORIGINAL_SCENE=this,window.AICANFEEL_DEBUG_PAUSE=()=>li.unsubscribe("canvas"),window.AICANFEEL_DEBUG_RESUME=()=>li.subscribe("canvas",mi.render.bind(mi),60),this.bloomPass=new eJ(this,this.post)');
@@ -44,9 +52,17 @@ function removeSpan(start,end) {
 removeSpan('n="glxp/models/Hapes_0002_Rigged",','n="glxp/models/Hapes_0003_Rigged",');
 removeSpan('n="glxp/models/Hapes_0001_Rigged",','n="glxp/models/Camera_Splines_002",');
 removeSpan('n="glxp/models/Hapes_0002_Rigged_anims",','n="glxp/models/Hapes_0003_Rigged_anims",');
-replace('const a=fr.main[r].url;e.push(', 'const a=fr.main[r].url;if(a.includes("/textures/Hape_0001/")||a.includes("/textures/Hape_0002/"))continue;e.push(');
-// The reference owns the choreography. Only its title mesh, brand strings,
-// local data, red theme and mobile render density are adapted here.
+// UV_Grid is an unused authoring/debug texture: native skinned materials and
+// the floor store that old constructor argument but never sample it.
+replace('const a=fr.main[r].url;e.push(', 'const a=fr.main[r].url;if(r==="test"||r==="testPng"||a.includes("/textures/Hape_0001/")||a.includes("/textures/Hape_0002/"))continue;e.push(');
+source = applyCameraRuntime(source);
+const chainManifest=JSON.parse(fs.readFileSync('vendor/accessories/party-chain-manifest.json', 'utf8'));
+source = applyPartyChainRuntime(source, chainManifest);
+const compressedNativeAssets=prepareCompressedNativeAssets(process.cwd(),chainManifest);
+source = applyCompressedAssetsRuntime(source,compressedNativeAssets);
+// Model data, materials, native fur shading and the red studio are retained.
+// The authored camera and mobile budgets are isolated in camera-runtime.mjs.
+source=applyMobileTexturesRuntime(source,JSON.parse(fs.readFileSync('dist/mobile-textures/manifest.json','utf8')));
 fs.writeFileSync('dist/assets/index.d8ad0078.js',source);
 const runtimeName='index.diwali-red-v1.js';
 fs.writeFileSync('dist/assets/'+runtimeName,source);
