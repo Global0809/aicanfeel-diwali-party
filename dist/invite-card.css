@@ -25,6 +25,9 @@ diwali-invite.is-visible .diwali-pass-floating{animation-play-state:running}
 .diwali-pass-title span{display:block}
 .diwali-pass-title span:last-child{color:var(--pass-gold)}
 .diwali-pass-wit{font:700 clamp(8px,.8vw,11px)/1.8 "Druk Text Wide",sans-serif;letter-spacing:.01em;text-transform:uppercase;color:var(--pass-white);margin:26px 0 0;max-width:40ch}
+.diwali-pass-dbyob{display:flex;align-items:center;gap:19px;margin-top:28px;color:var(--pass-gold)}
+.diwali-pass-dbyob strong{flex:none;font:800 18px/1.2 "Integral CF",sans-serif;letter-spacing:-.025em}
+.diwali-pass-dbyob p{margin:0;font:400 11px/1.7 "Neue Plak Extended",sans-serif;color:var(--pass-white)}
 .diwali-pass-bottom{margin-top:auto;padding-top:42px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:22px;align-items:end}
 .diwali-pass-place{min-width:0}
 .diwali-pass-place>span{display:block;font:700 7px/1.5 "Druk Text Wide",sans-serif;letter-spacing:.03em;color:var(--pass-gold);text-transform:uppercase;margin-bottom:10px}
@@ -62,3 +65,5 @@ diwali-invite ::selection{background:var(--pass-gold);color:#46090d}
 @media(prefers-reduced-motion:reduce){.diwali-pass-stage,.diwali-pass-floating,.diwali-pass-refraction:before{animation:none}.diwali-party-pass{transform:none;transition:none}.diwali-yay-button,.diwali-save-pass,.diwali-pass-tools{transition:none}.diwali-yay-button:hover,.diwali-save-pass:hover{transform:none}.diwali-pass-refraction:before{display:none}}
 @media(prefers-reduced-transparency:reduce){.diwali-party-pass{backdrop-filter:none;-webkit-backdrop-filter:none;background:linear-gradient(125deg,#852c2a,#410e1b) padding-box,linear-gradient(125deg,#ffe8b8,#b57046 60%,#ffecba) border-box}}
 .diwali-save-pass{font-size:11px}.diwali-pass-place address{font-size:12px}
+@media(max-width:1050px) and (min-width:651px){.diwali-pass-dbyob{display:block;margin-top:25px}.diwali-pass-dbyob strong{display:block;margin-bottom:9px;font-size:17px}.diwali-pass-dbyob p{font-size:10px}.diwali-pass-bottom{padding-top:28px}}
+@media(max-width:650px){.diwali-pass-dbyob{display:block;margin-top:25px}.diwali-pass-dbyob strong{display:block;font-size:18px;margin-bottom:9px}.diwali-pass-dbyob p{font-size:10px;line-height:1.8}.diwali-pass-bottom{padding-top:30px}.diwali-pass-body{min-height:510px}.diwali-pass-note{display:block;grid-column:1/-1;max-width:none;text-align:center;font-size:9px;margin-top:0}.diwali-pass-note br{display:none}}

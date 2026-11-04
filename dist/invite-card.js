@@ -13,8 +13,8 @@ class DiwaliInvite extends HTMLElement {
     this.finePointer = matchMedia('(hover: hover) and (pointer: fine)');
     this.innerHTML = `
       <div class="diwali-invite-ritual">
-        <h2>Consider this<br>your sign.</h2>
-        <p>Clear your evening.<br>We’ve saved the best part for you.</p>
+        <h2>Your plans?<br>Sorted.</h2>
+        <p>Bring your best stories.<br>We’ve got the spirits.</p>
         <button type="button" class="diwali-yay-button" aria-controls="diwali-pass-reveal" aria-expanded="false">Yayyyy</button>
       </div>
       <div id="diwali-pass-reveal" class="diwali-invite-reveal" hidden>
@@ -24,14 +24,15 @@ class DiwaliInvite extends HTMLElement {
             <div class="diwali-pass-body">
               <div class="diwali-pass-brandline"><span class="diwali-pass-host">aicanfeel</span><span>You’re invited.<br>Obviously.</span></div>
               <h3 class="diwali-pass-title"><span>DIWALI</span><span>PARTY.</span></h3>
-              <p class="diwali-pass-wit">Good company.<br>Questionable dance moves.</p>
-              <div class="diwali-pass-bottom"><div class="diwali-pass-place"><span>The place to be</span><address>DU-131, PitamPura, New Delhi</address></div><p class="diwali-pass-rsvp">Dress up. Show up.<br>Light it up.</p></div>
+              <p class="diwali-pass-wit">Come for the lights.<br>Stay for the spirits.</p>
+              <div class="diwali-pass-dbyob"><strong>DBYOB.</strong><p>Don’t Bring Your Own Booze.<br>We’ve made pour decisions for you.</p></div>
+              <div class="diwali-pass-bottom"><div class="diwali-pass-place"><span>The place to be</span><address>DU-131, PitamPura, New Delhi</address></div><p class="diwali-pass-rsvp">BYO good stories.<br>We’ve got the spirits.</p></div>
             </div>
             <div class="diwali-pass-stub">
-              <p class="diwali-pass-stub-label">One night.<br>Very good decisions.</p>
+              <p class="diwali-pass-stub-label">The spirits?<br>On us.</p>
               <time class="diwali-pass-date" datetime="2026-11-06T20:00:00+05:30"><strong>06</strong><span>NOV</span><small>FRIDAY, 2026</small></time>
               <div class="diwali-pass-time"><strong>8 PM</strong><span>India standard time</span></div>
-              <p class="diwali-pass-note">Your only assignment:<br>have a good night.</p>
+              <p class="diwali-pass-note">Book a cab.<br> Keep the stories.</p>
             </div>
           </article>
         </div></div>
@@ -247,16 +248,18 @@ class DiwaliInvite extends HTMLElement {
       ctx.fillStyle = gold; fitted('YOU’RE INVITED. OBVIOUSLY.', 840, 126, 470, 15, '"Druk Text Wide",sans-serif', 700);
       ctx.fillStyle = white; fitted('DIWALI', 79, 454, 1240, 211, '"Integral CF",sans-serif', 800);
       ctx.fillStyle = gold; fitted('PARTY.', 79, 660, 1240, 211, '"Integral CF",sans-serif', 800);
-      ctx.fillStyle = white; fitted('GOOD COMPANY.', 85, 744, 1180, 22, '"Druk Text Wide",sans-serif', 700); fitted('QUESTIONABLE DANCE MOVES.', 85, 785, 1180, 22, '"Druk Text Wide",sans-serif', 700);
-      ctx.fillStyle = gold; fitted('THE PLACE TO BE', 85, 926, 600, 16, '"Druk Text Wide",sans-serif', 700);
-      ctx.fillStyle = white; fitted(this.venueName, 85, 982, 1190, 25, '"Neue Plak Extended",sans-serif');
-      ctx.fillStyle = gold; fitted('ONE NIGHT.', 1453, 125, 267, 15, '"Druk Text Wide",sans-serif', 700); fitted('VERY GOOD DECISIONS.', 1453, 157, 267, 15, '"Druk Text Wide",sans-serif', 700);
+      ctx.fillStyle = white; fitted('COME FOR THE LIGHTS.', 85, 744, 1180, 22, '"Druk Text Wide",sans-serif', 700); fitted('STAY FOR THE SPIRITS.', 85, 785, 1180, 22, '"Druk Text Wide",sans-serif', 700);
+      ctx.fillStyle = gold; fitted('DBYOB.', 85, 856, 190, 32, '"Integral CF",sans-serif', 800);
+      ctx.fillStyle = white; fitted('Don’t Bring Your Own Booze.', 300, 840, 960, 22, '"Neue Plak Extended",sans-serif'); fitted('We’ve made pour decisions for you.', 300, 879, 960, 22, '"Neue Plak Extended",sans-serif');
+      ctx.fillStyle = gold; fitted('THE PLACE TO BE', 85, 946, 600, 16, '"Druk Text Wide",sans-serif', 700);
+      ctx.fillStyle = white; fitted(this.venueName, 85, 994, 1190, 25, '"Neue Plak Extended",sans-serif');
+      ctx.fillStyle = gold; fitted('THE SPIRITS?', 1453, 125, 267, 15, '"Druk Text Wide",sans-serif', 700); fitted('ON US.', 1453, 157, 267, 15, '"Druk Text Wide",sans-serif', 700);
       ctx.fillStyle = white; fitted('06', 1445, 410, 280, 184, '"Integral CF",sans-serif', 800); fitted('NOV', 1453, 482, 260, 47, '"Integral CF",sans-serif', 800);
       ctx.fillStyle = '#eac3b5'; fitted('FRIDAY, 2026', 1453, 530, 266, 18, '"Neue Plak Extended",sans-serif');
       ctx.strokeStyle = 'rgba(247,212,155,.35)'; ctx.beginPath(); ctx.moveTo(1453, 605); ctx.lineTo(1718, 605); ctx.stroke();
       ctx.fillStyle = white; fitted('8 PM', 1453, 722, 270, 73, '"Integral CF",sans-serif', 800);
       ctx.fillStyle = gold; fitted('INDIA STANDARD TIME', 1453, 768, 270, 14, '"Druk Text Wide",sans-serif', 700);
-      ctx.fillStyle = '#eac3b5'; fitted('Your only assignment:', 1453, 937, 270, 17, '"Neue Plak Extended",sans-serif'); fitted('have a good night.', 1453, 972, 270, 17, '"Neue Plak Extended",sans-serif');
+      ctx.fillStyle = '#eac3b5'; fitted('Book a cab.', 1453, 937, 270, 17, '"Neue Plak Extended",sans-serif'); fitted('Keep the stories.', 1453, 972, 270, 17, '"Neue Plak Extended",sans-serif');
       const blob = await new Promise(resolve => canvas.toBlob(resolve, 'image/png'));
       if (!blob) throw new Error('Could not export');
       this.saveBlob(blob, 'AICANFEEL-Diwali-Party-6-November-8PM.png');

@@ -17,8 +17,10 @@ replace('value:eV()||ZU()', 'value:"red"');
 // One scroll progress value controls the complete close-up to wide orbit.
 replace('this.scroll=window.pageYOffset/(this.scrollHeight-this.pageHeight)', 'this.scroll=window.DIWALI_CAMERA?.progress??0');
 replace('const TC=["red","black","white"]','const TC=["red"]');
-// The invitation has no trailer or audio controls. Prevent hidden reference
-// media from downloading while leaving model/file loader promises intact.
+replace('this.scene.on("error",()=>{this.loader.$patch(t=>{t.status="error"})})','this.scene.on("error",()=>{this.loader.$patch(t=>{t.status="error"}),window.DIWALI_MODEL_ERROR=true,window.dispatchEvent(new CustomEvent("diwali-model-error"))})');
+// Native route audio stays disabled so the explicit entry/sound controls can
+// lazily start the original ambient track through party-audio.js. Hidden
+// trailer/Konami media remain excluded; model/file loader promises are intact.
 replace('sound:!0,loader:', 'sound:!1,loader:', 3);
 replace('trailer720(){var t;return(t=this.data.navigation)==null?void 0:t.trailer.trailer720}', 'trailer720(){return null}');
 replace('trailer1080(){var t;return(t=this.data.navigation)==null?void 0:t.trailer.trailer1080}', 'trailer1080(){return null}');
@@ -61,7 +63,7 @@ source = applyPartyChainRuntime(source, chainManifest);
 const compressedNativeAssets=prepareCompressedNativeAssets(process.cwd(),chainManifest);
 source = applyCompressedAssetsRuntime(source,compressedNativeAssets);
 // Model data, materials, native fur shading and the red studio are retained.
-// The authored camera and mobile budgets are isolated in camera-runtime.mjs.
+// The original camera spline and mobile budgets are isolated in camera-runtime.mjs.
 source=applyMobileTexturesRuntime(source,JSON.parse(fs.readFileSync('dist/mobile-textures/manifest.json','utf8')));
 fs.writeFileSync('dist/assets/index.d8ad0078.js',source);
 const runtimeName='index.diwali-red-v1.js';

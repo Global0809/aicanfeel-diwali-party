@@ -1,7 +1,8 @@
 /**
  * Focused patches to the retained OGL renderer. No model, bone, material, fur
- * shader or light-spline data is replaced. The authored camera is a single
- * monotonic dolly with a restrained front-facing orbit, driven by scroll.
+ * shader or camera/light-spline data is replaced. The original reference
+ * camera and target splines run once from progress zero to one, driven by
+ * scroll. Their measured orbit is 379.4368 degrees around the gorilla.
  */
 export function applyCameraRuntime(input) {
   let source = input;
@@ -11,9 +12,8 @@ export function applyCameraRuntime(input) {
     source = source.split(before).join(after);
   };
 
-  // The former forward/backward spline and mouse pan are replaced by one pose
-  // function. The reference's moving light still samples its original spline.
-  replace('runCameraProgress(){if(this.debugMode', `runCameraProgress(){if(window.DIWALI_CAMERA&&window.DIWALI_CAMERA.enabled!==false){const p=this.scene.progress;const pose=window.DIWALI_CAMERA.pose(p);if(!this.scene.config.PauseLight.value)cr(this.lightPos,this.catmulls.light.getPointLinearMotion(p));this.camera.position.set(pose.position[0],pose.position[1],pose.position[2]);this.toLook.set(pose.target[0],pose.target[1],pose.target[2]);this.camera.lookAt(this.toLook);return;}if(this.debugMode`);
+  // Keep runCameraProgress completely unchanged: original camera, look-at,
+  // light, scale and pointer parallax. Scroll visits its 0..1 sequence once.
   replace('preRender(){this.orbitWalk.update(),EE(X2', 'preRender(){if(window.DIWALI_CAMERA&&window.DIWALI_CAMERA.enabled!==false){this.hapeWalkProgress=0;this.runCameraProgress();return;}this.orbitWalk.update(),EE(X2');
   replace('setProgress(e){this.progressTarget=e}', 'setProgress(e){this.progressTarget=Math.min(1,Math.max(0,Number.isFinite(e)?e:0))}');
   replace('e*=this.config.scroll_damping.value,this.timescale=', 'e*=window.AICANFEEL_REDUCED_MOTION?1:window.DIWALI_CAMERA&&window.DIWALI_CAMERA.enabled!==false?1-Math.exp(-Math.min(this.dt,100)/135):this.config.scroll_damping.value,this.timescale=');
@@ -35,6 +35,8 @@ export function applyCameraRuntime(input) {
   replace('(this.compositing.needsUpdate("hape_1")||this.forceAllDraw)&&this.drawPass("hape_1"),(this.compositing.needsUpdate("hape_2")||this.forceAllDraw)&&this.drawPass("hape_2"),(this.compositing.needsUpdate("hape_3")||this.forceAllDraw)&&this.drawPass("hape_3")', 'this.drawPass("hape_2")');
   replace('this.forceAllDraw&&this.drawcalls>40', 'this.forceAllDraw&&this.drawcalls>2');
   replace('this.bloomPass=new eJ(this,this.post),this.post.onLoaded()', 'this.bloomPass=new eJ(this,this.post),this.bloomPass.setBloomSetting("hape_2"),this.post.onLoaded()');
+  replace('this._emitter.emit("progress",Math.round(s/e.length*100))', 'this._emitter.emit("progress",Math.round(s/e.length*100)),window.dispatchEvent(new CustomEvent("diwali-model-progress",{detail:{progress:s/e.length,percent:Math.round(s/e.length*100),stage:"assets"}}))');
+  replace('this.debugManager.onLoaded(),ot.onLoaded(),ot.pane.refresh()}', 'this.debugManager.onLoaded(),ot.onLoaded(),ot.pane.refresh(),window.dispatchEvent(new CustomEvent("diwali-model-progress",{detail:{progress:1,percent:100,stage:"loaded",meshes:this.skinedMeshes.length}}))}');
 
   // Keep all shader inputs valid, but shrink render targets for unused themes.
   // The selected red target, ground reflection and model are unchanged.
@@ -68,13 +70,15 @@ const bootstrap = `
   api.mobile=mobile;
   api.metrics={profile:mobile?'mobile':'desktop',furShells:mobile?2:4,bloomPasses:mobile?4:6,dpr:Math.min(devicePixelRatio||1,mobile?1:1.5),frameMs:0,fps:0,renderedFrames:0,skippedFrames:0,qualityChanges:0};
   const clamp=value=>Math.min(1,Math.max(0,Number.isFinite(value)?value:0));
-  const smooth=value=>{const p=clamp(value);return p*p*(3-2*p);};
+  api.path='HAPE Camera_Splines_002';
+  api.referenceOrbitDegrees=379.43683643365455;
   api.pose=(progress=api.progress)=>{
-    const p=clamp(progress),dolly=1-Math.pow(1-p,1.55),orbit=smooth((p-.12)/.88);
-    const distance=2.1+13.4*dolly,angle=-.28+1.10*orbit;
-    const target=[.104*(1-dolly),4.739-2.10*dolly,.009*(1-dolly)];
-    const position=[target[0]+Math.sin(angle)*distance,target[1]+.075+.65*dolly,target[2]+Math.cos(angle)*distance];
-    return {position,target,distance,angle,progress:p};
+    const scene=window.AICANFEEL_ORIGINAL_SCENE,manager=scene?.cameraManager;
+    if(!manager?.catmulls?.camera||!manager.catmulls.lookat)return null;
+    const p=clamp(progress),camera=manager.catmulls.camera.getPointLinearMotion(p),look=manager.catmulls.lookat.getPointLinearMotion(p*1.3);
+    const position=[camera[0]*scene.root.scale[0],camera[1]*scene.root.scale[1],camera[2]*scene.root.scale[2]];
+    const target=[look[0]*scene.root.scale[0],look[1]*scene.root.scale[1],look[2]*scene.root.scale[2]];
+    return {position,target,distance:Math.hypot(...position.map((value,index)=>value-target[index])),angle:Math.atan2(position[0]-target[0],position[2]-target[2]),progress:p};
   };
   let last=0,average=0,samples=0,lastQualityChange=0,changePending=false,cardEnd=Infinity,lastPose=-1,lastSize='';
   const abort=new AbortController();

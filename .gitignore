@@ -2,5 +2,6 @@ node_modules/
 .playwright-cli/
 .impeccable/review/
 .impeccable/review-v2/
+.impeccable/review-final/
 .openai/*.local.*
 *.deploy.tar.gz

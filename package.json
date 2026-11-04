@@ -1,12 +1,12 @@
 {
   "name": "aicanfeel-diwali-party",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "private": true,
   "type": "module",
   "scripts": {
     "dev": "node serve.mjs",
     "build": "node scripts/adapt-reference.mjs",
-    "check": "node --check dist/diwali.js && node --check dist/invite-card.js && node --check dist/assets/index.diwali-red-v1.js",
+    "check": "node --check dist/diwali.js && node --check dist/invite-card.js && node --check dist/party-loader.js && node --check dist/party-audio.js && node --check dist/assets/index.diwali-red-v1.js",
     "pages": "node scripts/prepare-pages.mjs"
   }
 }

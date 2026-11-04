@@ -39,9 +39,10 @@ export function applyCompressedAssetsRuntime(input, entries) {
   const runtime = `
 const __diwaliBinaryAssets=${JSON.stringify(entries)};
 function __diwaliRawNativeBin(url){return new Promise((resolve,reject)=>{
+  const fail=message=>{window.DIWALI_MODEL_ERROR=true;window.dispatchEvent(new CustomEvent('diwali-model-error'));reject(new Error(message));};
   const request=new XMLHttpRequest();request.open('GET',url,true);request.responseType='arraybuffer';
-  request.onload=()=>{if(request.status>=200&&request.status<300&&request.response instanceof ArrayBuffer)resolve(request.response);else reject(new Error('Native binary could not load: '+url));};
-  request.onerror=()=>reject(new Error('Native binary network error: '+url));request.send();
+  request.onload=()=>{if(request.status>=200&&request.status<300&&request.response instanceof ArrayBuffer)resolve(request.response);else fail('Native binary could not load: '+url);};
+  request.onerror=()=>fail('Native binary network error: '+url);request.send();
 });}
 async function __diwaliLoadNativeBin(url){
   const entry=__diwaliBinaryAssets[url];
