@@ -8,7 +8,9 @@ The original native DPR ceiling of 1.5 is restored on phones. Adaptive quality c
 
 Prepared browser journeys passed at 390 × 844 / DPR 3, 320 × 740 / DPR 2, and desktop 1440 × 900 / DPR 1. Phone drawing buffers were 585 × 1266 and 480 × 1110; both fetched all 20 HQ maps and zero earlier phone maps. The decoded face color map was 2048 × 2048. All profiles loaded 13 meshes, entered with working sound, and had no failed requests, page errors, or horizontal overflow. The main phone journey also traversed the camera and revealed the correct invitation. Desktop fetched no phone textures. These observations do not establish physical-device FPS.
 
-Asset namespace `assets-mobile-hq5`, application suffix `.mobilehq5`, and new `/mobile-textures/hq/` URLs prevent stale-cache mixing. Root, `?v=final`, and `/invite/` URLs are retained. Public verification follows deployment.
+Asset namespace `assets-mobile-hq5`, application suffix `.mobilehq5`, and new `/mobile-textures/hq/` URLs prevent stale-cache mixing. Root, `?v=final`, and `/invite/` URLs are retained.
+
+Public verification passed after GitHub Pages built `ed6d61ce183da606561550595e196da9cc4ef706`, from application source `b1b5e66a8c8ae0a30abebe19117ee77fe8b6e4ce`. All three existing URLs returned 200 and referenced the HQ bundle. An unauthenticated 390 × 844 / DPR-3 touch browser loaded all 20 HQ textures and all 13 meshes, decoded the face map at 2048 × 2048, and rendered to 585 × 1266 at DPR 1.5 with the configured 1.15 floor. Sound entry worked; one brand occurrence, no overflow, no page errors, and no failed requests were observed. Existing recipients do not need a new link.
 
 ## v3.1 refinement — 4 November 2026
 

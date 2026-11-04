@@ -1,6 +1,6 @@
 # AICANFEEL Diwali Party
 
-Current revision: **v3.2**, improving mobile character fidelity. The existing [Diwali Party link](https://global0809.github.io/aicanfeel-diwali-party/), `?v=final`, and [/invite/](https://global0809.github.io/aicanfeel-diwali-party/invite/) are preserved. Publication verification for this revision follows deployment.
+Public revision: **v3.2**, improving mobile character fidelity. The existing [Diwali Party link](https://global0809.github.io/aicanfeel-diwali-party/), `?v=final`, and [/invite/](https://global0809.github.io/aicanfeel-diwali-party/invite/) are preserved and verified. Previously shared links need no replacement.
 
 **6 November 2026, 8 PM IST.** Hosted by **AICANFEEL** at **DU-131, PitamPura, New Delhi**. **DBYOB: Don’t Bring Your Own Booze.**
 
