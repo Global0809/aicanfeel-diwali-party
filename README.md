@@ -1,6 +1,6 @@
 # AICANFEEL Diwali Party
 
-Public final v3: [AICANFEEL Diwali Party](https://global0809.github.io/aicanfeel-diwali-party/?v=final). Published and verified without signing in on 4 November 2026.
+Current revision: **v3.1**. The existing public delivery remains [Diwali Party](https://global0809.github.io/aicanfeel-diwali-party/); publication checks for this revision are pending. Its fresh share URL is [/invite/](https://global0809.github.io/aicanfeel-diwali-party/invite/).
 
 **6 November 2026, 8 PM IST.** Hosted by **AICANFEEL** at **DU-131, PitamPura, New Delhi**. **DBYOB: Don’t Bring Your Own Booze.**
 
@@ -22,9 +22,11 @@ The original HAPE gorilla, rig, outfit, fonts, and Vue/OGL renderer remain. Forw
 
 The full-screen loader presents an animated orbital diya and rotating party quotes. Progress comes from native asset-completion events. Entry unlocks only after fonts settle, all 13 native skinned meshes are present, and three GL warmup frames have rendered. A model error or timeout offers retry and a quiet route directly to the invitation.
 
-**Enter the party — with sound** starts the reference’s original 19.252-second ambient loop from the click gesture. **Enter quietly** loads no audio. The header sound control can change the choice later. Audio is fetched on demand and reused from its cached buffer; it does not autoplay on module import.
+**Enter with sound** is the single normal loader action. It starts the reference’s original 19.252-second ambient loop from the click gesture. The header sound control can mute it later. Audio is fetched on demand and reused from its cached buffer; it does not autoplay on module import. Model-error recovery still offers a direct invitation fallback.
 
-The ending contains one **Yayyyy** action. It triggers finite fireworks and reveals a hovering foil invitation pass: landscape on desktop, portrait on phones. The pass and its 1800 × 1080 PNG include the confirmed event details, DBYOB copy, and the cab-home note. There is no name entry, hamburger menu, calendar, directions control, RSVP service, or admission system.
+The dedicated final stage contains one **Yayyyy** action. It triggers finite fireworks and reveals a foil invitation pass with gentle continuous breathing and foil light: landscape on desktop, portrait on phones. Reduced motion pauses the decorative movement. The pass and its 1800 × 1080 PNG include the confirmed event details, DBYOB copy, and the cab-home note. AICANFEEL appears visibly only in the top header. Name entry, hamburger, calendar, directions, and One More Round are absent.
+
+The social preview uses a brand-free **1200 × 630 JPEG (117,919 bytes)** with the real gorilla, Diwali, 6 November, and 8 PM. Static Open Graph/Twitter tags are present in the HTML; `/invite/` serves the same complete experience with its own share identity. Prepared custom modules use `.night4` filenames, while native assets retain `assets-final/`.
 
 ## Phone budgets
 
@@ -35,7 +37,7 @@ Hidden reference trailer and debug texture requests are disabled. Original ambie
 ## Source guide
 
 - `dist/index.html`, `diwali.css`, `diwali.js`: event copy, scroll, readiness gate, sound control, and embers.
-- `dist/party-loader.js/css`: loader, quotes, entry choices, error recovery, focus and scroll handling.
+- `dist/party-loader.js/css`: loader, quotes, sound entry, error recovery, focus and scroll handling.
 - `dist/party-audio.js`: original ambient loop, gesture unlock, lazy loading, caching, and mute.
 - `dist/invite-card.js/css`: Yayyyy, fireworks, foil pass, DBYOB copy, and PNG.
 - `scripts/camera-runtime.mjs`: original spline traversal and render budgets.
@@ -47,9 +49,9 @@ Hidden reference trailer and debug texture requests are disabled. Original ambie
 
 ## Validation and limits
 
-Final v3 browser journeys passed at 1440 × 900 desktop, touch-enabled 390 × 844, and 320 × 740. Checks cover the native full orbit, readiness gate, 13 meshes, quiet and sound entry, DBYOB pass, finite fireworks, PNG, reduced motion, and model-failure fallback. Quiet entry made zero audio requests; sound entry fetched the original ambient once and reused its buffer. Focused loader Lighthouse checks scored accessibility 100 and best practices 100. See `VERIFICATION.md` for scope.
+Prior v3 journeys covered desktop and phone layouts, the native full orbit, readiness gate, 13 meshes, audio, pass, fireworks, PNG, reduced motion, and model-failure fallback. Revision v3.1 verification and publication evidence are recorded separately in `VERIFICATION.md`.
 
-Browser emulation and lab scores do not establish physical-device FPS or universal compatibility. The retained native 3D scene still has a substantial model and shader workload. The published phone journey also passed, including sound, orbit, and card reveal with no page errors or failed assets.
+Browser emulation and lab scores do not establish physical-device FPS or universal compatibility. The retained native 3D scene still has a substantial model and shader workload.
 
 ## Provenance
 

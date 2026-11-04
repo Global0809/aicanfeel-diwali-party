@@ -1,5 +1,13 @@
 # Verification — final v3
 
+## v3.1 refinement — 4 November 2026
+
+Local prepared `/invite/` journeys passed at desktop 1440 × 900 and touch phone 390 × 844. Both loaded 13 meshes, offered exactly one **Enter with sound** button, fetched no audio before that click, and played the original ambient after it. Rendered body text contained exactly one AICANFEEL occurrence; the loader and card contained none. Quiet entry and One More Round were absent.
+
+The redesigned pre-reveal stage, Yayyyy, finite fireworks, and PNG export passed. Card breathing transforms changed over a 700 ms sample on both profiles while no fireworks frame remained active. The phone layout also fit 320 × 740 without overflow; reduced motion disabled the continuous card animation. Page errors and failed requests: none.
+
+Static Open Graph/Twitter tags specify a brand-free 1200 × 630 JPEG, a concise invitation title, date/time, and DBYOB. The JPEG weighs 117,919 bytes. A new `/invite/` path serves the same full experience with matching canonical and graph URL. Custom modules use `.night4` names while native assets remain unchanged. Syntax and whitespace checks passed. Public v3.1 verification follows publication; the earlier v3 evidence below is historical.
+
 4 November 2026. Local Chromium browser checks used the GitHub Pages project-path edition. This record covers the final native-orbit, loader, audio, DBYOB, and invitation revision. [Final v3 is public on GitHub Pages](https://global0809.github.io/aicanfeel-diwali-party/?v=final).
 
 ## Final functional journeys

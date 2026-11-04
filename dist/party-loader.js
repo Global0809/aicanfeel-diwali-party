@@ -32,7 +32,7 @@ class PartyLoader extends HTMLElement {
     this.abort = new AbortController();
     const id = `party-loader-${++loaderSequence}`;
     this.innerHTML = `<div class="party-loader-shell" role="dialog" aria-modal="true" aria-labelledby="${id}-title" aria-describedby="${id}-description" tabindex="-1">
-      <header class="party-loader-header"><span class="party-loader-brand">AICANFEEL</span><span class="party-loader-edition">DIWALI PARTY</span></header>
+      <header class="party-loader-header"><span class="party-loader-brand">DIWALI PARTY</span><span class="party-loader-edition">06 NOV / 8 PM</span></header>
       <div class="party-loader-main">
         <div class="party-loader-copy"><h1 id="${id}-title">LIGHTING UP<br>THE NIGHT.</h1><p id="${id}-description" class="party-loader-description">A good night deserves a proper entrance.</p></div>
         <div class="party-loader-light" aria-hidden="true">
@@ -49,7 +49,7 @@ class PartyLoader extends HTMLElement {
         <div class="party-loader-controls">
           <div class="party-loader-progress-copy"><p class="party-loader-status" role="status" aria-live="polite" aria-atomic="true">Preparing the original 3D scene.</p><span class="party-loader-state" aria-hidden="true">PLEASE HOLD THE SPARK</span></div>
           <div class="party-loader-progress is-indeterminate" role="progressbar" aria-label="3D scene loading" aria-valuemin="0" aria-valuemax="100" aria-valuetext="Preparing the original 3D scene"><span></span></div>
-          <div class="party-loader-actions" hidden><button class="party-loader-enter" type="button" disabled><span>Enter the party</span><small>with sound</small><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></button><button class="party-loader-quiet" type="button" disabled>Enter quietly</button></div>
+          <div class="party-loader-actions" hidden><button class="party-loader-enter" type="button" disabled><span>Enter with sound</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></button></div>
           <div class="party-loader-recovery" hidden><button class="party-loader-retry" type="button">Try loading again <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 10a7 7 0 1 0 0 5M19 4v6h-6"/></svg></button><a class="party-loader-fallback" href="#invitation">See the invitation</a></div>
         </div>
       </footer>
@@ -66,7 +66,6 @@ class PartyLoader extends HTMLElement {
 
     const listen = (element, type, callback, options = {}) => element.addEventListener(type, callback, {...options, signal:this.abort.signal});
     listen(this.querySelector('.party-loader-enter'), 'click', () => this.enter(true));
-    listen(this.querySelector('.party-loader-quiet'), 'click', () => this.enter(false));
     listen(this.querySelector('.party-loader-retry'), 'click', () => location.reload());
     listen(this.querySelector('.party-loader-fallback'), 'click', event => {
       event.preventDefault();
@@ -162,7 +161,7 @@ class PartyLoader extends HTMLElement {
     this.bar.setAttribute('aria-valuenow','100');
     this.bar.setAttribute('aria-valuetext','3D scene ready');
     this.heading.innerHTML = 'THE NIGHT<br>IS YOURS.';
-    this.status.textContent = 'The night is ready. Choose how to enter.';
+    this.status.textContent = 'The night is ready. Let it sound like one.';
     this.querySelector('.party-loader-state').textContent = 'ALL SET';
     this.recovery.hidden = true;
     this.actions.hidden = false;

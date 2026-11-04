@@ -58,19 +58,29 @@
       {
         "name": "loader-entry",
         "value": "native progress; 13 skinned meshes + 3 GL warmup frames + document.fonts.ready; exit .66s",
-        "purpose": "Honest readiness gate with sound or quiet entry."
+        "purpose": "Honest readiness gate with one Enter with sound action; model-error invitation fallback remains."
       },
       {
         "name": "reveal",
-        "value": "Yayyyy; finite fireworks; perspective arrival; gentle hover",
+        "value": "dedicated pre-reveal stage; Yayyyy; finite fireworks; perspective arrival; continuous gentle breathing and foil light",
         "purpose": "One celebratory foil-pass reveal."
       },
       {
         "name": "reduced-motion",
-        "value": "static native progress .97; no decorative motion or fireworks; immediate card",
+        "value": "static native progress .97; no decorative motion or fireworks; immediate card; breathing and foil light paused",
         "purpose": "Usable reduced-motion journey."
       }
     ],
+    "socialPreview": {
+      "revision": "v3.1; publication checks pending",
+      "image": "share/diwali-party-preview-v1.jpg",
+      "dimensions": "1200 × 630",
+      "bytes": 117919,
+      "content": "Brand-free real gorilla, Diwali, 6 November, and 8 PM; static OG/Twitter large-image tags.",
+      "sharePath": "/aicanfeel-diwali-party/invite/",
+      "customModuleSuffix": ".night4",
+      "nativeAssetDirectory": "assets-final/"
+    },
     "shadows": [
       {
         "name": "foil-pass",
@@ -106,7 +116,7 @@
     {
       "name": "Yayyyy",
       "kind": "button",
-      "description": "Only pre-reveal invitation action; starts finite fireworks and reveals the pass.",
+      "description": "Only action in the dedicated pre-reveal stage; starts finite fireworks and reveals the pass.",
       "html": "<button class=\"ds-yay\">Yayyyy</button>",
       "css": ".ds-yay{border:1px solid rgba(255,255,255,.8);padding:20px 44px 23px;border-radius:100px;font:800 40px/1.1 'Integral CF',sans-serif;letter-spacing:-.035em;color:#4d0a0e;background:linear-gradient(110deg,#fff5df,#f7d49b);box-shadow:0 11px 34px rgba(22,0,6,.35),inset 0 0 0 4px rgba(255,247,228,.55);cursor:pointer;transition:transform .35s}.ds-yay:hover{transform:translateY(-4px) scale(1.025);background:#fff4e7}.ds-yay:focus-visible{outline:2px solid #f7d49b;outline-offset:7px}.ds-yay:active{transform:scale(.98)}@media(prefers-reduced-motion:reduce){.ds-yay{transition:none}.ds-yay:hover{transform:none}}"
     },
@@ -123,21 +133,14 @@
       "kind": "button",
       "refersTo": "button-entry",
       "description": "Ready-only loader action; synchronously unlocks original ambient sound.",
-      "html": "<button class=\"ds-enter\">Enter the party<small>with sound</small></button>",
+      "html": "<button class=\"ds-enter\">Enter with sound</button>",
       "css": ".ds-enter{padding:16px 21px;min-height:54px;border:0;border-radius:60px;background:#ffdfaa;color:#340308;font:700 10px/1.4 'Druk Text Wide',sans-serif;text-align:left;text-transform:uppercase;cursor:pointer;transition:background .2s,transform .2s}.ds-enter small{display:block;font:400 10px/1.5 'Neue Plak Extended',sans-serif;text-transform:none;color:#660f13}.ds-enter:hover{background:#fff4df;transform:translateY(-2px)}.ds-enter:focus-visible{outline:2px solid #ffdfaa;outline-offset:6px}.ds-enter:disabled{opacity:.45;cursor:wait;transform:none}"
-    },
-    {
-      "name": "Quiet entry",
-      "kind": "button",
-      "description": "Equally available ready-only loader entry with no audio fetch.",
-      "html": "<button class=\"ds-quiet\">Enter quietly</button>",
-      "css": ".ds-quiet{padding:12px 0;border:0;border-radius:0;border-bottom:1px solid rgba(255,240,223,.45);background:transparent;color:#fff9f2;font:400 11px/1.5 'Neue Plak Extended',sans-serif;cursor:pointer}.ds-quiet:hover{color:#ffdfaa;border-color:#ffdfaa}.ds-quiet:focus-visible{outline:2px solid #ffdfaa;outline-offset:6px}"
     },
     {
       "name": "Foil party pass",
       "kind": "card",
-      "description": "Landscape desktop/portrait phone invitation with confirmed facts and explicit DBYOB meaning.",
-      "html": "<article class=\"ds-pass\"><span>aicanfeel</span><h3>DIWALI<br>PARTY.</h3><p><strong>DBYOB.</strong><br>Don’t Bring Your Own Booze.</p><p>06 NOVEMBER 2026 / 8 PM IST</p><p>DU-131, PitamPura, New Delhi</p></article>",
+      "description": "Brand-free landscape desktop/portrait phone invitation with confirmed facts, DBYOB, gentle continuous breathing, and foil light; reduced motion pauses decoration.",
+      "html": "<article class=\"ds-pass\"><span>You’re invited.</span><h3>DIWALI<br>PARTY.</h3><p><strong>DBYOB.</strong><br>Don’t Bring Your Own Booze.</p><p>06 NOVEMBER 2026 / 8 PM IST</p><p>DU-131, PitamPura, New Delhi</p></article>",
       "css": ".ds-pass{padding:36px 38px 34px;border:1px solid #f7d49b;border-radius:18px;background:linear-gradient(122deg,rgba(139,43,36,.82),rgba(58,9,18,.86) 53%,rgba(128,33,31,.78));color:#fff4e7;box-shadow:0 32px 70px rgba(21,0,6,.45);font:400 12px/1.7 'Neue Plak Extended',sans-serif}.ds-pass>span{font-weight:600;font-size:18px}.ds-pass h3{font:800 58px/.91 'Integral CF',sans-serif;letter-spacing:-.04em;margin:35px 0 26px}.ds-pass strong{color:#f7d49b;font:800 18px/1.2 'Integral CF',sans-serif}@media(max-width:650px){.ds-pass{border-radius:16px;padding:29px 26px 27px}}"
     }
   ],
@@ -165,8 +168,8 @@
     "dos": [
       "Do preserve the original gorilla, outfit, fonts, and native full orbit.",
       "Do show the native Diwali Party chain and one Yayyyy reveal.",
-      "Do keep 8 PM, DBYOB meaning, host, and venue synchronized across surfaces.",
-      "Do retain the honest readiness gate, quiet entry, error fallback, focus, and reduced motion."
+      "Do keep 8 PM, DBYOB meaning, and venue synchronized; show AICANFEEL visibly only in the top header.",
+      "Do retain the honest readiness gate, single Enter with sound action, error fallback, focus, and reduced motion."
     ],
     "donts": [
       "Don't restore the earlier 63° camera approximation or invent another camera path.",

@@ -1,7 +1,7 @@
 const DOWNLOAD_ICON = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m-5-5 5 5 5-5M5 17v4h14v-4"/></svg>';
 
 class DiwaliInvite extends HTMLElement {
-  static observedAttributes = ['host', 'venue'];
+  static observedAttributes = ['venue'];
 
   connectedCallback() {
     if (this.initialized) return;
@@ -13,16 +13,24 @@ class DiwaliInvite extends HTMLElement {
     this.finePointer = matchMedia('(hover: hover) and (pointer: fine)');
     this.innerHTML = `
       <div class="diwali-invite-ritual">
-        <h2>Your plans?<br>Sorted.</h2>
-        <p>Bring your best stories.<br>We’ve got the spirits.</p>
-        <button type="button" class="diwali-yay-button" aria-controls="diwali-pass-reveal" aria-expanded="false">Yayyyy</button>
+        <div class="diwali-ritual-copy">
+          <h2>Less thinking.<br><span>More clinking.</span></h2>
+          <p>Some nights deserve a yes.<br>We’ll take care of the spirits.</p>
+          <div class="diwali-ritual-facts"><span>06 NOV</span><span>8 PM</span><span>DBYOB.</span></div>
+        </div>
+        <div class="diwali-ritual-action">
+          <div class="diwali-ritual-aura" aria-hidden="true"></div>
+          <svg class="diwali-ritual-burst" viewBox="0 0 400 400" aria-hidden="true"><g><path d="M200 34v48m0 236v48M34 200h48m236 0h48M83 83l34 34m166 166 34 34M83 317l34-34m166-166 34-34"/><path d="m136 45 13 32m102 246 13 32M45 136l32 13m246 102 32 13M45 264l32-13m246-102 32-13M136 355l13-32m102-246 13-32"/></g><g class="diwali-ritual-sparks"><path d="m200 14 0 9m0 354 0 9M14 200h9m354 0h9M64 64l7 7m258 258 7 7M64 336l7-7m258-258 7-7"/><circle cx="112" cy="48" r="2"/><circle cx="352" cy="112" r="2"/><circle cx="48" cy="288" r="2"/><circle cx="288" cy="352" r="2"/></g></svg>
+          <button type="button" class="diwali-yay-button" aria-controls="diwali-pass-reveal" aria-expanded="false">Yayyyy</button>
+          <p class="diwali-ritual-tap">One click. A very good night.</p>
+        </div>
       </div>
       <div id="diwali-pass-reveal" class="diwali-invite-reveal" hidden>
         <div class="diwali-pass-stage"><div class="diwali-pass-floating">
-          <article class="diwali-party-pass" aria-label="You’re invited to the AICANFEEL Diwali party, 6 November 2026 at 8 PM India time" tabindex="-1">
+          <article class="diwali-party-pass" aria-label="You’re invited to the Diwali party, 6 November 2026 at 8 PM India time" tabindex="-1">
             <div class="diwali-pass-refraction" aria-hidden="true"></div>
             <div class="diwali-pass-body">
-              <div class="diwali-pass-brandline"><span class="diwali-pass-host">aicanfeel</span><span>You’re invited.<br>Obviously.</span></div>
+              <div class="diwali-pass-brandline"><span class="diwali-pass-host">Your invitation</span><span>You’re invited.<br>Obviously.</span></div>
               <h3 class="diwali-pass-title"><span>DIWALI</span><span>PARTY.</span></h3>
               <p class="diwali-pass-wit">Come for the lights.<br>Stay for the spirits.</p>
               <div class="diwali-pass-dbyob"><strong>DBYOB.</strong><p>Don’t Bring Your Own Booze.<br>We’ve made pour decisions for you.</p></div>
@@ -77,13 +85,11 @@ class DiwaliInvite extends HTMLElement {
   }
 
   attributeChangedCallback() { if (this.initialized) this.applyFacts(); }
-  get hostName() { return this.getAttribute('host') || 'AICANFEEL'; }
   get venueName() { return this.getAttribute('venue') || 'DU-131, PitamPura, New Delhi'; }
 
   applyFacts() {
-    this.querySelector('.diwali-pass-host').textContent = this.hostName;
     this.querySelector('address').textContent = this.venueName;
-    this.card.setAttribute('aria-label', `You’re invited to the ${this.hostName} Diwali party, 6 November 2026 at 8 PM India time`);
+    this.card.setAttribute('aria-label', 'You’re invited to the Diwali party, 6 November 2026 at 8 PM India time');
   }
 
   reveal() {
@@ -244,7 +250,7 @@ class DiwaliInvite extends HTMLElement {
         while (ctx.measureText(text).width > width && size > 9) ctx.font = `${weight} ${--size}px ${family}`;
         ctx.fillText(text, x, y);
       };
-      ctx.fillStyle = white; fitted(this.hostName.toLowerCase(), 84, 130, 670, 41, '"Neue Plak Extended",sans-serif', 600);
+      ctx.fillStyle = white; fitted('YOUR INVITATION', 84, 130, 670, 20, '"Druk Text Wide",sans-serif', 700);
       ctx.fillStyle = gold; fitted('YOU’RE INVITED. OBVIOUSLY.', 840, 126, 470, 15, '"Druk Text Wide",sans-serif', 700);
       ctx.fillStyle = white; fitted('DIWALI', 79, 454, 1240, 211, '"Integral CF",sans-serif', 800);
       ctx.fillStyle = gold; fitted('PARTY.', 79, 660, 1240, 211, '"Integral CF",sans-serif', 800);
@@ -262,7 +268,7 @@ class DiwaliInvite extends HTMLElement {
       ctx.fillStyle = '#eac3b5'; fitted('Book a cab.', 1453, 937, 270, 17, '"Neue Plak Extended",sans-serif'); fitted('Keep the stories.', 1453, 972, 270, 17, '"Neue Plak Extended",sans-serif');
       const blob = await new Promise(resolve => canvas.toBlob(resolve, 'image/png'));
       if (!blob) throw new Error('Could not export');
-      this.saveBlob(blob, 'AICANFEEL-Diwali-Party-6-November-8PM.png');
+      this.saveBlob(blob, 'Diwali-Party-6-November-8PM.png');
       this.statusElement.textContent = 'Your invitation is saved. See you at 8.';
     } catch (error) {
       this.statusElement.textContent = 'Could not save the image. Please try again.';

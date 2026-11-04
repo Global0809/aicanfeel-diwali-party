@@ -38,7 +38,7 @@ party-loader [hidden]{display:none!important}
 .party-loader-progress.is-indeterminate>span{width:30%;transform:none;animation:party-progress 1.7s ease-in-out infinite}
 .party-loader-actions,.party-loader-recovery{display:flex;align-items:center;justify-content:space-between;gap:24px;margin-top:24px;min-height:56px}
 .party-loader-enter,.party-loader-retry{display:inline-flex;align-items:center;justify-content:center;gap:14px;min-height:54px;padding:16px 21px;border:0;border-radius:60px;background:#ffdfaa;color:#340308;font:700 10px/1.4 'Druk Text Wide',sans-serif;cursor:pointer;text-transform:uppercase;transition:background .2s,transform .2s}
-.party-loader-enter{display:grid;grid-template-columns:auto 18px;gap:1px 24px;text-align:left}
+.party-loader-enter{display:flex;justify-content:space-between;gap:24px;text-align:left;width:100%;min-height:60px}
 .party-loader-enter>span{grid-column:1;grid-row:1}
 .party-loader-enter>small{grid-column:1;grid-row:2;font:400 10px/1.5 'Neue Plak Extended',sans-serif;text-transform:none;color:#660f13}
 .party-loader-enter svg{grid-column:2;grid-row:1/3}

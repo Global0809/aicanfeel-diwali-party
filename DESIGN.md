@@ -81,13 +81,13 @@ Preserve the three self-hosted reference families and their roles. Main headings
 
 ## Layout
 
-The fixed native canvas sits behind three open stage panels. Desktop copy alternates sides around the character. A sparse fixed brand/date/sound header and bottom invitation pill provide shortcuts; there is no hamburger. At phone widths the copy and pass reflow without horizontal overflow. The landscape desktop pass becomes portrait below 650px, with additional compact adjustments at 370px.
+The fixed native canvas sits behind three open stage panels. Desktop copy alternates sides around the character. A sparse fixed brand/date/sound header and bottom invitation pill provide shortcuts; there is no hamburger. **AICANFEEL appears visibly only in this top header.** The loader, pass, PNG, and social image carry no repeated brand; the One More Round link is removed. At phone widths the copy and pass reflow without horizontal overflow. The landscape desktop pass becomes portrait below 650px, with additional compact adjustments at 370px.
 
 The full-screen loader has a desktop copy/orbital composition and a compact phone layout. It locks scrolling and page interaction, traps focus, and restores prior state on exit. Quotes are visual, not repeated live announcements.
 
 ## Elevation & Depth
 
-The original 3D scene supplies the main depth. Native neon, bounded gold embers, and a short glass veil support the camera movement. The foil pass combines a metallic border, refractive sweep, translucent wine material, perspective arrival, and a soft offset shadow. Reduced transparency replaces translucent surfaces with solid alternatives.
+The original 3D scene supplies the main depth. Native neon, bounded gold embers, and a short glass veil support the camera movement. The foil pass combines a metallic border, foil light, translucent wine material, perspective arrival, gentle continuous breathing, and a soft offset shadow. Reduced motion pauses decorative movement; reduced transparency supplies solid alternatives.
 
 ## Shapes
 
@@ -101,15 +101,19 @@ Forward scrolling evaluates the original **HAPE Camera_Splines_002** camera and 
 
 ### Loader and Sound Entry
 
-The progress bar follows native asset-completion events. Ready entry appears only after 13 skinned meshes, three GL warmup frames, and settled fonts. Primary entry synchronously unlocks the original ambient audio from the click; quiet entry requests no audio. An explicit model-error/timeout state offers retry or a quiet invitation fallback. The exit takes at most .66 seconds and becomes immediate for reduced motion.
+The progress bar follows native asset-completion events. Ready entry appears only after 13 skinned meshes, three GL warmup frames, and settled fonts. A single **Enter with sound** action synchronously unlocks the original ambient audio from the click. An explicit model-error/timeout state still offers retry or a quiet invitation fallback. The exit takes at most .66 seconds and becomes immediate for reduced motion.
 
 ### Yayyyy and Foil Pass
 
-Yayyyy is the only action before reveal. It starts finite fireworks and reveals the hovering foil pass; PNG save follows. The page, pass, and PNG retain 6 November 2026, 8 PM IST, the host, venue, and **DBYOB — Don’t Bring Your Own Booze**. Reduced motion holds a static native pose at .97 and reveals the card immediately without fireworks or decorative arrival/hover.
+A dedicated final stage leads to the single Yayyyy action. It starts finite fireworks and reveals the breathing foil pass; PNG save follows. The page, pass, and PNG retain 6 November 2026, 8 PM IST, venue, and **DBYOB — Don’t Bring Your Own Booze**. Host branding stays only in the top header. Reduced motion holds a static native pose at .97 and reveals the card immediately without fireworks or decorative arrival/breathing.
 
 ### Sound Control
 
-The fixed header exposes sound state and a keyboard-accessible toggle. The original ambient loop loads only after opt-in and reuses its decoded buffer. Quiet entry is an equally visible option.
+The fixed header exposes sound state and a keyboard-accessible mute toggle. The original ambient loop loads only after the **Enter with sound** click and reuses its decoded buffer.
+
+### Social Preview
+
+Static OG/Twitter large-image tags point to the brand-free 1200 × 630 JPEG (117,919 bytes): real gorilla, Diwali, 6 November, and 8 PM in the existing red language. The fresh `/invite/` alias serves the complete site. Custom modules use `.night4` filenames; native assets retain `assets-final/`. Current v3.1 publication verification is pending.
 
 ## Do's and Don'ts
 
@@ -117,8 +121,8 @@ The fixed header exposes sound state and a keyboard-accessible toggle. The origi
 
 - **Do** preserve the original gorilla, outfit, fonts, and native full orbit.
 - **Do** show the native Diwali Party chain and one Yayyyy reveal.
-- **Do** keep 8 PM, DBYOB meaning, host, and venue synchronized across surfaces.
-- **Do** retain the honest readiness gate, quiet entry, error fallback, focus, and reduced motion.
+- **Do** keep 8 PM, DBYOB meaning, and venue synchronized; show AICANFEEL only in the top header.
+- **Do** retain the honest readiness gate, single sound entry, error fallback, focus, and reduced motion.
 
 ### Don't:
 
