@@ -1,9 +1,10 @@
 {
   "schema": 1,
-  "description": "Phone-only JPEG variants for the retained HAPE red gorilla and red environment. Original assets are unchanged.",
+  "description": "Higher-fidelity phone JPEG profile: authored character color/normal maps up to 2K, with compact environment and shading maps. Original assets and earlier phone variants are unchanged.",
+  "profile": "mobile-hq",
   "entries": {
     "/glxp/environment/LightRed3.jpg": {
-      "url": "/mobile-textures/glxp/environment/LightRed3.jpg",
+      "url": "/mobile-textures/hq/glxp/environment/LightRed3.jpg",
       "sourceUrl": "/glxp/environment/LightRed3.jpg",
       "kind": "lighting",
       "sourceBytes": 43072,
@@ -19,7 +20,7 @@
       "quality": 85
     },
     "/glxp/environment/SkyboxRed.jpg": {
-      "url": "/mobile-textures/glxp/environment/SkyboxRed.jpg",
+      "url": "/mobile-textures/hq/glxp/environment/SkyboxRed.jpg",
       "sourceUrl": "/glxp/environment/SkyboxRed.jpg",
       "kind": "skybox",
       "sourceBytes": 1287430,
@@ -35,39 +36,39 @@
       "quality": 85
     },
     "/textures/Hape_0003/fbx-ape-lores_Obsidian_BaseColor.1001A.jpg": {
-      "url": "/mobile-textures/textures/Hape_0003/2048/fbx-ape-lores_Obsidian_BaseColor.1001A.jpg.jpg",
+      "url": "/mobile-textures/hq/textures/Hape_0003/2048/fbx-ape-lores_Obsidian_BaseColor.1001A.jpg.jpg",
       "sourceUrl": "/textures/Hape_0003/2048/fbx-ape-lores_Obsidian_BaseColor.1001A.jpg.jpg",
       "kind": "color",
       "sourceBytes": 524866,
-      "bytes": 41229,
+      "bytes": 524866,
       "sourceDimensions": [
         2048,
         2048
       ],
       "dimensions": [
-        1024,
-        1024
+        2048,
+        2048
       ],
-      "quality": 85
+      "quality": "original"
     },
     "/textures/Hape_0003/fbx-ape-lores_Obsidian_Normal.1001.jpg": {
-      "url": "/mobile-textures/textures/Hape_0003/2048/fbx-ape-lores_Obsidian_Normal.1001.jpg.jpg",
+      "url": "/mobile-textures/hq/textures/Hape_0003/2048/fbx-ape-lores_Obsidian_Normal.1001.jpg.jpg",
       "sourceUrl": "/textures/Hape_0003/2048/fbx-ape-lores_Obsidian_Normal.1001.jpg.jpg",
       "kind": "normal",
       "sourceBytes": 426569,
-      "bytes": 186197,
+      "bytes": 426569,
       "sourceDimensions": [
         2048,
         2048
       ],
       "dimensions": [
-        1024,
-        1024
+        2048,
+        2048
       ],
-      "quality": 85
+      "quality": "original"
     },
     "/textures/Hape_0003/Mat_AO.jpg": {
-      "url": "/mobile-textures/textures/Hape_0003/1024/Mat_AO.jpg.jpg",
+      "url": "/mobile-textures/hq/textures/Hape_0003/1024/Mat_AO.jpg.jpg",
       "sourceUrl": "/textures/Hape_0003/1024/Mat_AO.jpg.jpg",
       "kind": "occlusion",
       "sourceBytes": 60645,
@@ -83,11 +84,11 @@
       "quality": 85
     },
     "/textures/Hape_0003/DefaultMaterial_Base_color_1.png": {
-      "url": "/mobile-textures/textures/Hape_0003/512/DefaultMaterial_Base_color_1.png.jpg",
+      "url": "/mobile-textures/hq/textures/Hape_0003/512/DefaultMaterial_Base_color_1.png.jpg",
       "sourceUrl": "/textures/Hape_0003/512/DefaultMaterial_Base_color_1.png.jpg",
       "kind": "color",
       "sourceBytes": 9062,
-      "bytes": 5069,
+      "bytes": 9062,
       "sourceDimensions": [
         512,
         512
@@ -96,26 +97,26 @@
         512,
         512
       ],
-      "quality": 85
+      "quality": "original"
     },
     "/textures/Hape_0003/DefaultMaterial_Normal_OpenGL.png": {
-      "url": "/mobile-textures/textures/Hape_0003/1024/DefaultMaterial_Normal_OpenGL.png.jpg",
+      "url": "/mobile-textures/hq/textures/Hape_0003/1024/DefaultMaterial_Normal_OpenGL.png.jpg",
       "sourceUrl": "/textures/Hape_0003/1024/DefaultMaterial_Normal_OpenGL.png.jpg",
       "kind": "normal",
       "sourceBytes": 504567,
-      "bytes": 59573,
+      "bytes": 504567,
       "sourceDimensions": [
         1024,
         1024
       ],
       "dimensions": [
-        512,
-        512
+        1024,
+        1024
       ],
-      "quality": 85
+      "quality": "original"
     },
     "/textures/Hape_0003/Mat.2_AO.jpg": {
-      "url": "/mobile-textures/textures/Hape_0003/1024/Mat.2_AO.jpg.jpg",
+      "url": "/mobile-textures/hq/textures/Hape_0003/1024/Mat.2_AO.jpg.jpg",
       "sourceUrl": "/textures/Hape_0003/1024/Mat.2_AO.jpg.jpg",
       "kind": "occlusion",
       "sourceBytes": 67731,
@@ -131,7 +132,7 @@
       "quality": 85
     },
     "/textures/Hape_0003/uploads_files_2938648_High(FBX)_FivePanel_Black_Color.1001.png": {
-      "url": "/mobile-textures/textures/Hape_0003/512/uploads_files_2938648_High(FBX)_FivePanel_Black_Color.1001.png.jpg",
+      "url": "/mobile-textures/hq/textures/Hape_0003/512/uploads_files_2938648_High(FBX)_FivePanel_Black_Color.1001.png.jpg",
       "sourceUrl": "/textures/Hape_0003/512/uploads_files_2938648_High(FBX)_FivePanel_Black_Color.1001.png.jpg",
       "kind": "color",
       "sourceBytes": 1492,
@@ -147,7 +148,7 @@
       "quality": "original"
     },
     "/textures/Hape_0003/Hat_FivePanel_AO.jpg": {
-      "url": "/mobile-textures/textures/Hape_0003/512/Hat_FivePanel_AO.jpg.jpg",
+      "url": "/mobile-textures/hq/textures/Hape_0003/512/Hat_FivePanel_AO.jpg.jpg",
       "sourceUrl": "/textures/Hape_0003/512/Hat_FivePanel_AO.jpg.jpg",
       "kind": "occlusion",
       "sourceBytes": 38661,
@@ -163,23 +164,23 @@
       "quality": 85
     },
     "/textures/Hape_0003/uploads_files_2938648_HighFBX_FivePanel_Black_Normal.1001.png": {
-      "url": "/mobile-textures/textures/Hape_0003/1024/uploads_files_2938648_HighFBX_FivePanel_Black_Normal.1001.png.jpg",
+      "url": "/mobile-textures/hq/textures/Hape_0003/1024/uploads_files_2938648_HighFBX_FivePanel_Black_Normal.1001.png.jpg",
       "sourceUrl": "/textures/Hape_0003/1024/uploads_files_2938648_HighFBX_FivePanel_Black_Normal.1001.png.jpg",
       "kind": "normal",
       "sourceBytes": 717858,
-      "bytes": 132658,
+      "bytes": 717858,
       "sourceDimensions": [
         1024,
         1024
       ],
       "dimensions": [
-        512,
-        512
+        1024,
+        1024
       ],
-      "quality": 85
+      "quality": "original"
     },
     "/textures/Hape_0003/Laces_AO.jpg": {
-      "url": "/mobile-textures/textures/Hape_0003/512/Laces_AO.jpg.jpg",
+      "url": "/mobile-textures/hq/textures/Hape_0003/512/Laces_AO.jpg.jpg",
       "sourceUrl": "/textures/Hape_0003/512/Laces_AO.jpg.jpg",
       "kind": "occlusion",
       "sourceBytes": 51867,
@@ -195,11 +196,11 @@
       "quality": 85
     },
     "/textures/Hape_0003/Bronx_Fixed_Bronx_Black_BaseColor_A.jpg": {
-      "url": "/mobile-textures/textures/Hape_0003/256/Bronx_Fixed_Bronx_Black_BaseColor_A.jpg.jpg",
+      "url": "/mobile-textures/hq/textures/Hape_0003/256/Bronx_Fixed_Bronx_Black_BaseColor_A.jpg.jpg",
       "sourceUrl": "/textures/Hape_0003/256/Bronx_Fixed_Bronx_Black_BaseColor_A.jpg.jpg",
       "kind": "color",
       "sourceBytes": 25544,
-      "bytes": 3723,
+      "bytes": 25544,
       "sourceDimensions": [
         256,
         256
@@ -208,10 +209,10 @@
         256,
         256
       ],
-      "quality": 85
+      "quality": "original"
     },
     "/textures/Hape_0003/Bronx_Fixed_Bronx_Black_Normal.jpg": {
-      "url": "/mobile-textures/textures/Hape_0003/512/Bronx_Fixed_Bronx_Black_Normal.jpg.jpg",
+      "url": "/mobile-textures/hq/textures/Hape_0003/512/Bronx_Fixed_Bronx_Black_Normal.jpg.jpg",
       "sourceUrl": "/textures/Hape_0003/512/Bronx_Fixed_Bronx_Black_Normal.jpg.jpg",
       "kind": "normal",
       "sourceBytes": 46774,
@@ -227,7 +228,7 @@
       "quality": "original"
     },
     "/textures/Hape_0003/Bronx_Fixed_Bronx_Black_Invert_Metallic_Roughness.jpg": {
-      "url": "/mobile-textures/textures/Hape_0003/256/Bronx_Fixed_Bronx_Black_Invert_Metallic_Roughness.jpg.jpg",
+      "url": "/mobile-textures/hq/textures/Hape_0003/256/Bronx_Fixed_Bronx_Black_Invert_Metallic_Roughness.jpg.jpg",
       "sourceUrl": "/textures/Hape_0003/256/Bronx_Fixed_Bronx_Black_Invert_Metallic_Roughness.jpg.jpg",
       "kind": "material",
       "sourceBytes": 53536,
@@ -243,7 +244,7 @@
       "quality": 85
     },
     "/textures/Hape_0003/Shoe_Left_AO.jpg": {
-      "url": "/mobile-textures/textures/Hape_0003/512/Shoe_Left_AO.jpg.jpg",
+      "url": "/mobile-textures/hq/textures/Hape_0003/512/Shoe_Left_AO.jpg.jpg",
       "sourceUrl": "/textures/Hape_0003/512/Shoe_Left_AO.jpg.jpg",
       "kind": "occlusion",
       "sourceBytes": 39013,
@@ -259,11 +260,11 @@
       "quality": 85
     },
     "/textures/Hape_0003/Model_B2_Shirt_Colorb.jpg": {
-      "url": "/mobile-textures/textures/Hape_0003/1024/Model_B2_Shirt_Colorb.jpg.jpg",
+      "url": "/mobile-textures/hq/textures/Hape_0003/1024/Model_B2_Shirt_Colorb.jpg.jpg",
       "sourceUrl": "/textures/Hape_0003/1024/Model_B2_Shirt_Colorb.jpg.jpg",
       "kind": "color",
       "sourceBytes": 248627,
-      "bytes": 208715,
+      "bytes": 248627,
       "sourceDimensions": [
         1024,
         1024
@@ -272,26 +273,26 @@
         1024,
         1024
       ],
-      "quality": 85
+      "quality": "original"
     },
     "/textures/Hape_0003/Model_B2_Shirt_Normal.jpg": {
-      "url": "/mobile-textures/textures/Hape_0003/2048/Model_B2_Shirt_Normal.jpg.jpg",
+      "url": "/mobile-textures/hq/textures/Hape_0003/2048/Model_B2_Shirt_Normal.jpg.jpg",
       "sourceUrl": "/textures/Hape_0003/2048/Model_B2_Shirt_Normal.jpg.jpg",
       "kind": "normal",
       "sourceBytes": 862631,
-      "bytes": 162864,
+      "bytes": 862631,
       "sourceDimensions": [
         2048,
         2048
       ],
       "dimensions": [
-        1024,
-        1024
+        2048,
+        2048
       ],
-      "quality": 85
+      "quality": "original"
     },
     "/textures/Hape_0003/Shirt_AO.jpg": {
-      "url": "/mobile-textures/textures/Hape_0003/1024/Shirt_AO.jpg.jpg",
+      "url": "/mobile-textures/hq/textures/Hape_0003/1024/Shirt_AO.jpg.jpg",
       "sourceUrl": "/textures/Hape_0003/1024/Shirt_AO.jpg.jpg",
       "kind": "occlusion",
       "sourceBytes": 109612,
@@ -307,11 +308,11 @@
       "quality": 85
     },
     "/textures/Hape_0003/Eyes_Red.jpg": {
-      "url": "/mobile-textures/textures/Hape_0003/512/Eyes_Red.jpg.jpg",
+      "url": "/mobile-textures/hq/textures/Hape_0003/512/Eyes_Red.jpg.jpg",
       "sourceUrl": "/textures/Hape_0003/512/Eyes_Red.jpg.jpg",
       "kind": "color",
       "sourceBytes": 102934,
-      "bytes": 21433,
+      "bytes": 102934,
       "sourceDimensions": [
         512,
         512
@@ -320,16 +321,16 @@
         512,
         512
       ],
-      "quality": 85
+      "quality": "original"
     }
   },
   "totals": {
     "entryCount": 20,
     "sourceJpegBytes": 5222491,
-    "generatedJpegBytes": 1071673,
-    "savedBytes": 4150818,
-    "reductionPercent": 79.48,
+    "generatedJpegBytes": 3672870,
+    "savedBytes": 1549621,
+    "reductionPercent": 29.67,
     "sourcePixels": 25034752,
-    "generatedPixels": 8519680
+    "generatedPixels": 19529728
   }
 }

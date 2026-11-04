@@ -1,4 +1,4 @@
-# Diwali Party surface — v3.1
+# Diwali Party surface — v3.2
 
 Mode: Experience. The user-pinned original HAPE red identity remains the authority.
 
@@ -12,6 +12,8 @@ No name field, hamburger, calendar, directions, One More Round link, RSVP backen
 
 Model failure/timeout provides retry and a quiet invitation fallback. Reduced motion holds native progress .97, disables decorative motion/fireworks, and reveals the pass immediately. Phone profiles reduce texture, chain, fur, and bloom costs and pause hidden/covered rendering.
 
-Social sharing uses static OG/Twitter tags and a fresh `/invite/` alias, with a brand-free 1200 × 630 real-gorilla JPEG (117,919 bytes). Custom application modules use `.night4`; native assets stay under `assets-final/`.
+Mobile character maps retain their authored JPEG bytes, with 2K face detail and higher render resolution (DPR ceiling 1.5, adaptive floor 1.15 on high-density phones). The 20-map profile weighs 3.67 MB. The original geometry/camera and lighter fur/bloom/chain budgets remain.
 
-Public delivery remains https://global0809.github.io/aicanfeel-diwali-party/ . Current v3.1 public phone and anonymous preview/image checks passed. Earlier Sites publications remain separate. See VERIFICATION.md for current evidence and reference provenance; browser/lab checks do not establish physical-device FPS.
+Social sharing uses static OG/Twitter tags and the existing `/invite/` alias, with a brand-free 1200 × 630 real-gorilla JPEG (117,919 bytes). Custom application modules use `.mobilehq5`; native assets use `assets-mobile-hq5/`. All earlier public URLs remain valid.
+
+Public delivery remains https://global0809.github.io/aicanfeel-diwali-party/ . See VERIFICATION.md for current v3.2 evidence and reference provenance; browser/lab checks do not establish physical-device FPS. Earlier Sites publications remain separate.

@@ -1,5 +1,15 @@
 # Verification — final v3
 
+## v3.2 mobile fidelity — 4 November 2026
+
+The higher-detail phone profile retains 11 authored character color/normal JPEGs byte-for-byte. Face color/normal and shirt normal maps increase from 1024 to 2048; body/hat normals increase from 512 to 1024. All 20 generated maps decode with verified dimensions. JPEG transfer is 3,672,870 bytes versus the previous 1,071,673 bytes; environment and auxiliary shading maps stay compact. Original source assets and earlier phone variants are untouched.
+
+The original native DPR ceiling of 1.5 is restored on phones. Adaptive quality clamps to a floor of 1.15 on high-density devices, or 1 on DPR-1 screens. Native fur/bloom/chain budgets, geometry compression, pauses, loader readiness, and original camera splines remain. Read-only review confirmed `runCameraProgress` is byte-identical to the reference.
+
+Prepared browser journeys passed at 390 × 844 / DPR 3, 320 × 740 / DPR 2, and desktop 1440 × 900 / DPR 1. Phone drawing buffers were 585 × 1266 and 480 × 1110; both fetched all 20 HQ maps and zero earlier phone maps. The decoded face color map was 2048 × 2048. All profiles loaded 13 meshes, entered with working sound, and had no failed requests, page errors, or horizontal overflow. The main phone journey also traversed the camera and revealed the correct invitation. Desktop fetched no phone textures. These observations do not establish physical-device FPS.
+
+Asset namespace `assets-mobile-hq5`, application suffix `.mobilehq5`, and new `/mobile-textures/hq/` URLs prevent stale-cache mixing. Root, `?v=final`, and `/invite/` URLs are retained. Public verification follows deployment.
+
 ## v3.1 refinement — 4 November 2026
 
 Local prepared `/invite/` journeys passed at desktop 1440 × 900 and touch phone 390 × 844. Both loaded 13 meshes, offered exactly one **Enter with sound** button, fetched no audio before that click, and played the original ambient after it. Rendered body text contained exactly one AICANFEEL occurrence; the loader and card contained none. Quiet entry and One More Round were absent.

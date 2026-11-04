@@ -113,7 +113,9 @@ The fixed header exposes sound state and a keyboard-accessible mute toggle. The 
 
 ### Social Preview
 
-Static OG/Twitter large-image tags point to the brand-free 1200 × 630 JPEG (117,919 bytes): real gorilla, Diwali, 6 November, and 8 PM in the existing red language. The fresh `/invite/` alias serves the complete site. Custom modules use `.night4` filenames; native assets retain `assets-final/`. Current v3.1 publication verification is pending.
+Static OG/Twitter large-image tags point to the brand-free 1200 × 630 JPEG (117,919 bytes): real gorilla, Diwali, 6 November, and 8 PM in the existing red language. The `/invite/` alias serves the complete site. Custom modules use `.mobilehq5` filenames; native assets use `assets-mobile-hq5/`.
+
+Mobile v3.2 retains authored character color and normal JPEGs without extra recompression: face and shirt normal detail reach 2K. Rendering starts at the native DPR ceiling of 1.5 with a guarded 1.15 floor on high-density phones. Keep the existing red world, geometry, original camera path, interface, and social artwork intact.
 
 ## Do's and Don'ts
 

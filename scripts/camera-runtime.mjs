@@ -67,8 +67,10 @@ const bootstrap = `
   const api=window.DIWALI_CAMERA=Object.assign({progress:0,enabled:true,paused:false,adaptive:true},window.DIWALI_CAMERA||{});
   const motion=matchMedia('(prefers-reduced-motion: reduce)');
   const mobile=innerWidth<768||matchMedia('(pointer: coarse)').matches;
+  const phoneDprFloor=Math.min(1.15,Math.max(devicePixelRatio||1,1));
   api.mobile=mobile;
-  api.metrics={profile:mobile?'mobile':'desktop',furShells:mobile?2:4,bloomPasses:mobile?4:6,dpr:Math.min(devicePixelRatio||1,mobile?1:1.5),frameMs:0,fps:0,renderedFrames:0,skippedFrames:0,qualityChanges:0};
+  api.quality=mobile?'high-detail-mobile-v2':'reference-desktop';
+  api.metrics={profile:mobile?'mobile':'desktop',furShells:mobile?2:4,bloomPasses:mobile?4:6,dpr:Math.max(1,Math.min(devicePixelRatio||1,1.5)),dprFloor:mobile?phoneDprFloor:1,frameMs:0,fps:0,renderedFrames:0,skippedFrames:0,qualityChanges:0};
   const clamp=value=>Math.min(1,Math.max(0,Number.isFinite(value)?value:0));
   api.path='HAPE Camera_Splines_002';
   api.referenceOrbitDegrees=379.43683643365455;
@@ -98,11 +100,11 @@ const bootstrap = `
     const now=performance.now(),dt=last?now-last:0;last=now;
     metrics.renderedFrames++;metrics.dpr=scene.dpr;
     if(dt>0&&dt<250&&scene.drawcalls>30){average=average?average*.92+dt*.08:dt;samples++;metrics.frameMs=+average.toFixed(2);metrics.fps=+(1000/average).toFixed(1);}
-    if(mobile&&api.adaptive&&samples>60&&average>35&&scene.dpr>.72&&now-lastQualityChange>7000&&!changePending){
+    if(mobile&&api.adaptive&&samples>60&&average>35&&scene.dpr>phoneDprFloor+.01&&now-lastQualityChange>7000&&!changePending){
       changePending=true;lastQualityChange=now;
       setTimeout(()=>{
         if(document.hidden){changePending=false;return;}
-        const next=Math.max(.7,Math.round((scene.dpr-.15)*100)/100);
+        const next=Math.max(phoneDprFloor,Math.round((scene.dpr-.15)*100)/100);
         scene.dpr=next;scene.manager.dpr=next;
         window.dispatchEvent(new Event('resize'));
         metrics.dpr=next;metrics.qualityChanges++;samples=0;average=0;last=0;changePending=false;

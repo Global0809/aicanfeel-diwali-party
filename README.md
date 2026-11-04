@@ -1,6 +1,6 @@
 # AICANFEEL Diwali Party
 
-Current public revision: **v3.1**. The existing [Diwali Party link](https://global0809.github.io/aicanfeel-diwali-party/) is updated and verified without signing in. Its fresh share URL is [/invite/](https://global0809.github.io/aicanfeel-diwali-party/invite/).
+Current revision: **v3.2**, improving mobile character fidelity. The existing [Diwali Party link](https://global0809.github.io/aicanfeel-diwali-party/), `?v=final`, and [/invite/](https://global0809.github.io/aicanfeel-diwali-party/invite/) are preserved. Publication verification for this revision follows deployment.
 
 **6 November 2026, 8 PM IST.** Hosted by **AICANFEEL** at **DU-131, PitamPura, New Delhi**. **DBYOB: Don’t Bring Your Own Booze.**
 
@@ -26,11 +26,13 @@ The full-screen loader presents an animated orbital diya and rotating party quot
 
 The dedicated final stage contains one **Yayyyy** action. It triggers finite fireworks and reveals a foil invitation pass with gentle continuous breathing and foil light: landscape on desktop, portrait on phones. Reduced motion pauses the decorative movement. The pass and its 1800 × 1080 PNG include the confirmed event details, DBYOB copy, and the cab-home note. AICANFEEL appears visibly only in the top header. Name entry, hamburger, calendar, directions, and One More Round are absent.
 
-The social preview uses a brand-free **1200 × 630 JPEG (117,919 bytes)** with the real gorilla, Diwali, 6 November, and 8 PM. Static Open Graph/Twitter tags are present in the HTML; `/invite/` serves the same complete experience with its own share identity. Prepared custom modules use `.night4` filenames, while native assets retain `assets-final/`.
+The social preview uses a brand-free **1200 × 630 JPEG (117,919 bytes)** with the real gorilla, Diwali, 6 November, and 8 PM. Static Open Graph/Twitter tags are present in the HTML; `/invite/` serves the same complete experience with its own share identity. Prepared custom modules use `.mobilehq5` filenames and native assets use `assets-mobile-hq5/`, preserving cached earlier releases.
 
 ## Phone budgets
 
-Phone rendering uses two fur shells, four bloom passes, a smaller chain mesh, and adaptive DPR capped at 1. Rendering pauses while hidden or covered by the invitation. Twenty phone JPEG variants reduce their source weight from 5.22 MB to 1.07 MB; active phone native binaries compress from 6.07 MB raw to 2.54 MB gzip. `DecompressionStream` has a raw-file fallback. Desktop source texture URLs and binaries remain intact.
+Phone rendering uses the native DPR ceiling of 1.5, with a conservative adaptive floor of 1.15 on high-density screens and 1 on DPR-1 screens. Face color/normal and shirt normal maps retain their authored 2048 resolution; other character detail maps retain their original 1024 resolution. All 11 character color/normal JPEGs are copied byte-for-byte from the native source, avoiding extra lossy recompression. The 20-map phone profile weighs 3.67 MB, up from 1.07 MB for the previous profile and below the 5.22 MB source set.
+
+Two fur shells, four bloom passes, the smaller chain, visibility pauses, and gzip model loading remain. Active phone native binaries compress from 6.07 MB raw to 2.54 MB gzip with a raw-file fallback. Desktop source texture URLs and binaries remain intact.
 
 Hidden reference trailer and debug texture requests are disabled. Original ambient audio is a separate opt-in request. Reduced motion holds a static native pose at progress .97, removes decorative movement and fireworks, and reveals the pass immediately. Reduced transparency supplies solid alternatives.
 
@@ -49,7 +51,7 @@ Hidden reference trailer and debug texture requests are disabled. Original ambie
 
 ## Validation and limits
 
-Prior v3 journeys covered desktop and phone layouts, the native full orbit, readiness gate, 13 meshes, audio, pass, fireworks, PNG, reduced motion, and model-failure fallback. Revision v3.1 verification and publication evidence are recorded separately in `VERIFICATION.md`.
+Prior journeys covered desktop and phone layouts, the native full orbit, readiness gate, 13 meshes, audio, pass, fireworks, PNG, reduced motion, and model-failure fallback. Revision v3.2 quality and publication evidence are recorded in `VERIFICATION.md`.
 
 Browser emulation and lab scores do not establish physical-device FPS or universal compatibility. The retained native 3D scene still has a substantial model and shader workload.
 

@@ -31,7 +31,8 @@ replace('this.activeTextureId=0,this.textures={','this.activeTextureId=1,this.te
 replace('this.hapes[e].title.mesh.visible=!0','this.hapes[e].title.mesh.visible=!1');
 replace('le(g),le(l,null,{default:Me(()=>[Ie(U("p",ate','Zt("",!0),le(l,null,{default:Me(()=>[Ie(U("p",ate');
 replace('document.addEventListener("keydown",t=>{(t.key==" "||t.code=="Space")&&t.preventDefault()});','');
-replace('this.dpr=Math.max(Math.min(window.devicePixelRatio,1.5),1)','this.dpr=Math.max(Math.min(window.devicePixelRatio,window.innerWidth<768?1:1.5),1)');
+// Keep the reference renderer's native DPR ceiling of 1.5 on phones too.
+// The mobile adapter can gently reduce it if sustained rendering is slow.
 replace('home:null,navigation:null,about:null,press:null,pressPostsPerPage:', 'home:window.AICANFEEL_CONTENT.home,navigation:window.AICANFEEL_CONTENT.navigation,about:window.AICANFEEL_CONTENT.about,press:window.AICANFEEL_CONTENT.press,pressPostsPerPage:');
 replace('function pp(t,e={}){const n=t==null?void 0:t.asset._ref;if(!n)return _q;', 'function pp(t,e={}){const n=t==null?void 0:t.asset._ref;if(!n)return _q;const local=window.AICANFEEL_CONTENT_MAP[n];if(local)return{src:local,lazy:local};');
 replace('fashion:"High-Fashion Hapes"', 'fashion:"AICANFEEL STUDIO"');

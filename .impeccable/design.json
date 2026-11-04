@@ -72,14 +72,14 @@
       }
     ],
     "socialPreview": {
-      "revision": "v3.1; publication checks pending",
+      "revision": "v3.2; authored mobile character maps and higher render resolution",
       "image": "share/diwali-party-preview-v1.jpg",
       "dimensions": "1200 × 630",
       "bytes": 117919,
       "content": "Brand-free real gorilla, Diwali, 6 November, and 8 PM; static OG/Twitter large-image tags.",
       "sharePath": "/aicanfeel-diwali-party/invite/",
-      "customModuleSuffix": ".night4",
-      "nativeAssetDirectory": "assets-final/"
+      "customModuleSuffix": ".mobilehq5",
+      "nativeAssetDirectory": "assets-mobile-hq5/"
     },
     "shadows": [
       {

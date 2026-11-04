@@ -22,6 +22,7 @@ An AICANFEEL Diwali party invitation for **6 November 2026 at 8 PM IST**, at **D
 - End with a dedicated pre-reveal stage, one Yayyyy action, finite fireworks, a responsive pass with gentle continuous breathing and foil light, and PNG save. Pause decorative motion for reduced motion.
 - Remove name entry, calendar, directions, hamburger navigation, and the One More Round link.
 - Preserve phone usability, keyboard focus, reduced motion, and a model-error route to the invitation.
+- Preserve authored character texture detail on phones: original 2K face maps and sharper render resolution, with guarded mobile rendering costs.
 - Publish publicly on GitHub Pages at the existing delivery URL.
 - Supply static OG/Twitter large-image metadata and a fresh `/invite/` share URL. The brand-free 1200 × 630 JPEG shows the real gorilla with Diwali, 6 November, and 8 PM.
 
@@ -31,4 +32,4 @@ No RSVP backend, personal guest database, admission code, or unconfirmed end tim
 
 ## Verification scope
 
-Revision v3.1 updates the share preview, branding, entry, and final reveal. Desktop and phone journeys passed, followed by a public phone journey and anonymous preview/image access checks. Browser checks do not establish physical-device FPS. See VERIFICATION.md for current delivery evidence.
+Revision v3.2 improves mobile character fidelity while preserving all already-shared URLs. Browser checks do not establish physical-device FPS. See VERIFICATION.md for current delivery evidence.
