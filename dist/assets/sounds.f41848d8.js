@@ -1,0 +1,1 @@
+import{_}from"./index.diwali-red-v1.js";var s={"@/assets/audios/ambient.mp3":()=>_(()=>import("./ambient.1def1767.js"),[]),"@/assets/audios/konami.mp3":()=>_(()=>import("./konami.012a2c99.js"),[])};export{s as default};

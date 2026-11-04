@@ -1,0 +1,25 @@
+/* The original responsive composition remains the visual authority. */
+:root { color-scheme: dark; }
+html { background:#ed1c24; }
+::selection { background:#fff; color:#000; }
+:focus-visible { outline:2px solid #fff; outline-offset:6px; }
+.theme-switcher,.site-toolbar__hapebar { display:none!important; }
+.logo-sprite { background:none!important; display:flex; align-items:center; justify-content:center; }
+.logo-sprite::after { content:"AICANFEEL"; font-family:"Druk Text Wide",sans-serif; font-weight:700; font-size:clamp(12px,2.4vw,21px); letter-spacing:-.04em; color:currentColor; white-space:nowrap; }
+.site-loader .logo-sprite { width:min(76vw,440px)!important; height:60px!important; opacity:1!important; }
+.site-loader .logo-sprite::after { font-size:clamp(24px,6vw,49px); }
+.site-content__intro-logo { overflow:visible; }
+.site-content__intro-logo > svg { visibility:hidden; }
+.site-content__intro-logo > .aicanfeel-wordmark { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; font-family:"Druk Text Wide",sans-serif; font-weight:700; color:#000; font-size:12vw; line-height:.95; letter-spacing:-.04em; white-space:nowrap; transform:translateY(40px); }
+.site-menu__title { background-image:none!important; }
+.site-menu__title::after { content:"AICANFEEL"; display:block; font-family:"Druk Text Wide",sans-serif; font-weight:700; color:currentColor; font-size:10.6vw; line-height:1; letter-spacing:-.04em; white-space:nowrap; }
+button,a { -webkit-tap-highlight-color:transparent; }
+@media(max-width:767px) {
+  .site-content__intro-logo > .aicanfeel-wordmark { align-items:center; font-size:11vw; transform:translateY(20px); }
+  .site-menu__title::after { font-size:10vw; }
+  .site-loader__text { max-width:90vw; }
+}
+@media(prefers-reduced-motion:reduce) {
+  *,*::before,*::after { scroll-behavior:auto!important; }
+  .sound-toggle span,.scroll-indicator,.tutorial__icon { animation:none!important; }
+}
