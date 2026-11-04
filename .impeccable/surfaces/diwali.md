@@ -14,4 +14,4 @@ Model failure/timeout provides retry and a quiet invitation fallback. Reduced mo
 
 Social sharing uses static OG/Twitter tags and a fresh `/invite/` alias, with a brand-free 1200 × 630 real-gorilla JPEG (117,919 bytes). Custom application modules use `.night4`; native assets stay under `assets-final/`.
 
-Public delivery remains https://global0809.github.io/aicanfeel-diwali-party/ . Current v3.1 publication checks are pending. Earlier Sites publications remain separate. See VERIFICATION.md for current evidence and reference provenance; browser/lab checks do not establish physical-device FPS.
+Public delivery remains https://global0809.github.io/aicanfeel-diwali-party/ . Current v3.1 public phone and anonymous preview/image checks passed. Earlier Sites publications remain separate. See VERIFICATION.md for current evidence and reference provenance; browser/lab checks do not establish physical-device FPS.

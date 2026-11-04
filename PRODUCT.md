@@ -31,4 +31,4 @@ No RSVP backend, personal guest database, admission code, or unconfirmed end tim
 
 ## Verification scope
 
-Revision v3.1 updates the share preview, branding, entry, and final reveal. Its publication checks are pending. Prior browser checks do not establish physical-device FPS. See VERIFICATION.md for current delivery evidence.
+Revision v3.1 updates the share preview, branding, entry, and final reveal. Desktop and phone journeys passed, followed by a public phone journey and anonymous preview/image access checks. Browser checks do not establish physical-device FPS. See VERIFICATION.md for current delivery evidence.

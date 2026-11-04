@@ -1,6 +1,6 @@
 # AICANFEEL Diwali Party
 
-Current revision: **v3.1**. The existing public delivery remains [Diwali Party](https://global0809.github.io/aicanfeel-diwali-party/); publication checks for this revision are pending. Its fresh share URL is [/invite/](https://global0809.github.io/aicanfeel-diwali-party/invite/).
+Current public revision: **v3.1**. The existing [Diwali Party link](https://global0809.github.io/aicanfeel-diwali-party/) is updated and verified without signing in. Its fresh share URL is [/invite/](https://global0809.github.io/aicanfeel-diwali-party/invite/).
 
 **6 November 2026, 8 PM IST.** Hosted by **AICANFEEL** at **DU-131, PitamPura, New Delhi**. **DBYOB: Don’t Bring Your Own Booze.**
 
